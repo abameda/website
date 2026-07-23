@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amwag Attendance — Case Study · Abdelhmeed Elshorbagy</title>
+  <meta name="description" content="Case study: a production-grade bilingual attendance platform — branch and IP validation, role-based access, analytics, PDF reporting, backups. Next.js, TypeScript, MySQL/MariaDB." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Amwag Attendance — attendance governance built for operational reliability" />
+  <meta property="og:description" content="A bilingual employee attendance platform with branch/IP validation, RBAC, analytics, PDF exports, and backup workflows." />
+  <meta property="og:image" content="../assets/og.svg" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="ae-mark" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 50 L34 14" stroke="currentColor"/>
+        <path d="M53 14 H34 V50 H53" stroke="currentColor"/>
+        <path d="M23 32 H49" stroke="#55b7ff"/>
+      </g>
+      <g id="i-arrow"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="i-check"><path d="M3 8.5 6.5 12 13 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="../index.html" aria-label="AE — home">
+        <svg viewBox="0 0 64 64"><use href="#ae-mark" style="color:#eceff4"/></svg>
+        <span class="logo-name">Abdelhmeed Elshorbagy</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="../index.html#contact">
+        <span class="dot-live" aria-hidden="true"></span>
+        Available for projects
+      </a>
+      <button class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#expertise">Expertise</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+
+  <main id="main">
+    <section class="cs-hero">
+      <div class="container">
+        <p class="crumb reveal"><a href="../index.html#work">Selected work</a> <span>/</span> Case study 02</p>
+        <h1 class="reveal">Amwag Attendance — governance you can actually trust.</h1>
+        <p class="cs-lede reveal">
+          A production-grade bilingual attendance platform for a multi-branch company:
+          branch and IP validation, role-based access, analytics, PDF reporting, and
+          backup-and-restore workflows — engineered for the days when things go wrong.
+        </p>
+        <div class="cs-facts reveal">
+          <div class="cs-fact"><span class="k">Category</span><span class="v">Internal platform · Workforce operations</span></div>
+          <div class="cs-fact"><span class="k">Role</span><span class="v">System architecture · Full-stack engineering · Product ownership</span></div>
+          <div class="cs-fact"><span class="k">Stack</span><span class="v">Next.js · TypeScript · MySQL / MariaDB</span></div>
+          <div class="cs-fact"><span class="k">Timeline</span><span class="v"><span class="placeholder-tag">add dates</span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-body">
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">01</span><h2>Context</h2></aside>
+        <div class="cs-prose">
+          <p>Attendance sounds like a solved problem until it meets a real company:
+             multiple branches, shifting schedules, employees and administrators with
+             very different needs, and records that feed payroll and decisions.
+             Off-the-shelf tools didn't fit the operation's rules — so the company
+             needed its own system, and needed it to be dependable.</p>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">02</span><h2>Business problem</h2></aside>
+        <div class="cs-prose">
+          <ul>
+            <li>Attendance records must be trustworthy — payroll and accountability
+                depend on them.</li>
+            <li>Check-ins must provably happen at the right branch, not from a phone
+                at home.</li>
+            <li>Administration needed visibility across branches without manual
+                collation.</li>
+            <li>Reports had to leave the system in a form managers actually use: PDF,
+                in Arabic and English.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">03</span><h2>User problem</h2></aside>
+        <div class="cs-prose">
+          <p>Two very different users share one system. An <strong>employee</strong>
+             needs check-in to take seconds and to trust that their record is correct.
+             An <strong>administrator</strong> needs to see anomalies quickly, manage
+             exceptions fairly, and produce reports without exporting to spreadsheets
+             and fixing them by hand.</p>
+          <p>If either experience fails, people route around the system — and the data
+             stops being true.</p>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">04</span><h2>Constraints</h2></aside>
+        <div class="cs-prose">
+          <ul>
+            <li>Full bilingual interface — Arabic and English across every screen and
+                every generated document.</li>
+            <li>Validation strict enough to prevent abuse, forgiving enough for
+                legitimate edge cases (network changes, branch visits).</li>
+            <li>Data loss is unacceptable: backups and restore had to be first-class
+                features, not scripts on a server.</li>
+            <li>Runs on pragmatic infrastructure — reliability through design, not
+                through expensive platforms.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">05</span><h2>My role</h2></aside>
+        <div class="cs-prose">
+          <p>I designed and built the platform end to end: the data model and
+             validation architecture, the employee and administration experiences,
+             the reporting and backup subsystems, and the production deployment —
+             plus ongoing product decisions as the operation's rules evolved.</p>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">06</span><h2>Product strategy</h2></aside>
+        <div class="cs-prose">
+          <p>The strategy: <strong>make the honest path the easy path.</strong>
+             Check-in is near-instant when you're where you should be; every exception
+             has a legitimate route through an administrator. Governance features were
+             framed as protecting employees' records, not surveilling them — which is
+             also simply what the system does.</p>
+        </div>
+      </section>
+
+      <!-- Check-in validation flow -->
+      <div class="cs-band reveal">
+        <div class="container">
+          <div class="flow" role="img" aria-label="Check-in flow: identity, branch IP validation, time rules, record written, visible in analytics">
+            <span class="step">Employee signs in</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span class="step hot">Branch &amp; IP validated</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span class="step">Shift rules applied</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span class="step hot">Record written</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span class="step">Analytics &amp; reports</span>
+          </div>
+          <p class="band-note">Every record earns its trustworthiness before it exists.</p>
+        </div>
+      </div>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">07</span><h2>UX &amp; system architecture</h2></aside>
+        <div class="cs-prose">
+          <p>The platform is really two products on one data model:</p>
+          <ul>
+            <li><strong>Employee surface</strong> — check in/out, personal history, and
+                request flows, optimised for speed on a phone.</li>
+            <li><strong>Administration surface</strong> — branch dashboards, anomaly
+                review, employee management, report generation, and system settings
+                including backups.</li>
+          </ul>
+          <p>Role-based access control separates what each role can see and change,
+             down to the action level — an administrator of one branch is not an
+             administrator of all branches.</p>
+        </div>
+      </section>
+
+      <!-- Architecture diagram -->
+      <div class="cs-band reveal">
+        <div class="container">
+          <div class="arch" role="img" aria-label="Architecture layers: Next.js client, API and validation layer, MySQL/MariaDB with scheduled backups">
+            <div class="layer">
+              <span class="l-name">Client</span>
+              <div class="l-items"><i>Next.js app</i><i>Employee UI</i><i>Admin UI</i><i>AR / EN</i></div>
+            </div>
+            <span class="link-col" aria-hidden="true">↓ ↑</span>
+            <div class="layer">
+              <span class="l-name">Service</span>
+              <div class="l-items"><i>TypeScript API</i><i>Auth &amp; RBAC</i><i>IP / branch validation</i><i>PDF generation</i></div>
+            </div>
+            <span class="link-col" aria-hidden="true">↓ ↑</span>
+            <div class="layer">
+              <span class="l-name">Data</span>
+              <div class="l-items"><i>MySQL / MariaDB</i><i>Attendance records</i><i>Scheduled backups</i><i>Restore workflow</i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">08</span><h2>Design decisions</h2></aside>
+        <div class="cs-prose">
+          <p>Internal tools deserve design too. The interface uses a calm dashboard
+             language with clear status colors, dense-but-readable tables, and
+             bilingual typography that keeps Arabic and English equally legible.
+             Anomalies are surfaced, not buried: the admin home answers "what needs my
+             attention today?" before anything else.</p>
+        </div>
+      </section>
+
+      <!-- Production screens -->
+      <div class="container reveal">
+        <div class="cs-shots">
+          <p class="shots-label">The platform in production</p>
+          <div class="shots-wide">
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-attendance/01-login.png" alt="Bilingual Amwag Attendance sign-in screen with EN/AR toggle" loading="lazy" /></span>
+              <figcaption><b>Sign in</b> — a branded, bilingual entry point; language is a first-class toggle, not a setting.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-attendance/02-dashboard.png" alt="Admin dashboard showing today's attendance stats, an action queue, and branch performance" loading="lazy" /></span>
+              <figcaption><b>Admin dashboard</b> — answers "what needs my attention today?" first: present / absent / late tiles, an action queue, and branches sorted by who needs attention.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-attendance/03-employees.png" alt="Employee management screen with shift, branch, and overtime rules" loading="lazy" /></span>
+              <figcaption><b>Employee management</b> — branch assignment, shift windows, off-days, and overtime rules in one focused workspace, with bulk import.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-attendance/04-branches.png" alt="Branch directory table listing branches, codes, employee counts, and IP rules" loading="lazy" /></span>
+              <figcaption><b>Branch directory</b> — the operational records that drive assignment, attendance filters, and network rules — Arabic and English branch names side by side.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-attendance/05-attendance-logs.png" alt="Attendance logs with employee, branch, status, and date-range filters and a PDF export button" loading="lazy" /></span>
+              <figcaption><b>Attendance logs</b> — filter by employee, branch, status, and date range, then export the exact filtered view as a formal PDF.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-attendance/06-branch-ip-rules.png" alt="Branch IP rules screen for adding exact IP or CIDR allow-list entries" loading="lazy" /></span>
+              <figcaption><b>Branch IP rules</b> — the governance core: exact-IP and CIDR allow-lists decide, per branch, where a check-in is allowed to happen.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-attendance/07-system-backup.png" alt="System backup history with encrypted, restore-ready database snapshots" loading="lazy" /></span>
+              <figcaption><b>System backup</b> — encrypted, restore-ready database snapshots as a first-class feature, not a script on a server.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">09</span><h2>Technical implementation</h2></aside>
+        <div class="cs-prose">
+          <ul>
+            <li><strong>Next.js + TypeScript</strong> end to end — one language, typed
+                contracts between UI and API.</li>
+            <li><strong>Validation pipeline</strong> — identity, branch IP allow-lists,
+                and shift rules evaluated server-side before any record is written.</li>
+            <li><strong>Reporting engine</strong> — parameterised queries feeding
+                bilingual PDF exports for payroll periods and branch summaries.</li>
+            <li><strong>Backup &amp; restore</strong> — scheduled database backups with
+                an administrator-facing restore workflow, tested rather than assumed.</li>
+            <li><strong>Auditability</strong> — administrative changes to records are
+                attributable, so exceptions stay accountable.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">10</span><h2>Challenges &amp; trade-offs</h2></aside>
+        <div class="cs-prose">
+          <p><strong>Strictness vs. reality.</strong> IP validation is a strong signal
+             but not a perfect one — networks change, employees travel between branches.
+             The trade-off: strict automatic validation with an explicit, logged
+             administrative override, instead of loosening the rules for everyone.</p>
+          <p><strong>Building restore, not just backup.</strong> Backups that have never
+             been restored are a hope, not a plan. Building a real restore workflow took
+             meaningful extra effort and was worth every hour.</p>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">11</span><h2>Outcome</h2></aside>
+        <div class="cs-prose">
+          <p>Qualitative outcomes — no invented metrics:</p>
+          <div class="outcomes">
+            <div class="outcome-card">
+              <svg viewBox="0 0 16 16"><use href="#i-check"/></svg>
+              <p><strong>In production</strong>The platform runs the company's real
+              attendance operation across branches, in both languages.</p>
+            </div>
+            <div class="outcome-card">
+              <svg viewBox="0 0 16 16"><use href="#i-check"/></svg>
+              <p><strong>Trustworthy records</strong>Validation at write time means
+              reports are generated, not reconciled.</p>
+            </div>
+            <div class="outcome-card">
+              <svg viewBox="0 0 16 16"><use href="#i-check"/></svg>
+              <p><strong>Operationally safe</strong>Backups, restore, and role-based
+              access make the system dependable, not just functional.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">12</span><h2>Lessons learned</h2></aside>
+        <div class="cs-prose">
+          <p>Internal platforms live or die on trust. Users forgive a plain interface;
+             they never forgive a wrong record. Investing early in validation,
+             auditability, and restore workflows is what separates a tool people use
+             from a tool people work around.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="cs-next">
+      <div class="container">
+        <span class="k">Next case study</span>
+        <a class="next-title" href="dose-fragrance.html">
+          DÖSE Fragrance
+          <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="sig" href="../index.html" aria-label="AE — home">
+        <svg viewBox="0 0 64 64"><use href="#ae-mark" style="color:#eceff4"/></svg>
+        <small>© <span id="year">2026</span> Abdelhmeed Elshorbagy</small>
+      </a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <small>Designed &amp; built by AE · Egypt</small>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdelhmeed Elshorbagy — IT Specialist &amp; Full-Stack Product Builder</title>
+  <meta name="description" content="IT specialist and full-stack product builder combining engineering, product design, and business strategy to turn complex ideas into production-ready systems. Selected work: Amwag Attendance, DÖSE." />
+  <meta name="author" content="Abdelhmeed Elshorbagy" />
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Abdelhmeed Elshorbagy — IT Specialist & Full-Stack Product Builder" />
+  <meta property="og:description" content="Digital products and systems that move businesses forward. Product strategy, UI/UX design, and full-stack engineering in one person." />
+  <meta property="og:image" content="assets/og.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><style>.reveal,.mask-line>span{opacity:1!important;transform:none!important}.intro{display:none}</style></noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdelhmeed Elshorbagy",
+    "jobTitle": "IT Specialist · Full-Stack Product Builder",
+    "worksFor": { "@type": "Organization", "name": "Amwag Travel" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Minya National University" },
+    "email": "mailto:abdelhmeed.mohsen@gmail.com",
+    "address": { "@type": "PostalAddress", "addressCountry": "EG" },
+    "knowsAbout": ["Product Strategy", "UI/UX Design", "Next.js", "TypeScript", "System Architecture", "E-commerce", "Bilingual Interface Design"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Shared SVG defs: AE monogram + icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="ae-mark" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 50 L34 14" stroke="currentColor"/>
+        <path d="M53 14 H34 V50 H53" stroke="currentColor"/>
+        <path d="M23 32 H49" stroke="#55b7ff"/>
+      </g>
+      <g id="i-arrow"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="i-arrow-down"><path d="M8 3v10M4 9l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="i-copy"><rect x="5" y="5" width="9" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M11 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1" fill="none" stroke="currentColor" stroke-width="1.5"/></g>
+      <g id="i-check"><path d="M3 8.5 6.5 12 13 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="i-lock"><rect x="3" y="7" width="10" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 7V5.5a2.5 2.5 0 0 1 5 0V7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="10.5" r="1.1" fill="currentColor"/></g>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Intro (fast, skippable, once per session) ===== -->
+  <div class="intro" id="intro">
+    <div class="intro-grid"></div>
+    <svg class="intro-mark" viewBox="0 0 64 64" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 50 L34 14" stroke="#eceff4"/>
+      <path d="M53 14 H34 V50 H53" stroke="#eceff4"/>
+      <path d="M23 32 H49" stroke="#55b7ff"/>
+    </svg>
+    <button class="intro-skip" type="button">Skip intro</button>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#top" aria-label="AE — back to top">
+        <svg viewBox="0 0 64 64"><use href="#ae-mark" style="color:#eceff4"/></svg>
+        <span class="logo-name">Abdelhmeed Elshorbagy</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">
+        <span class="dot-live" aria-hidden="true"></span>
+        Available for projects
+      </a>
+      <button class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#work">Work</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <p class="menu-meta"><span class="dot-live" style="display:inline-block;margin-right:8px"></span>Available for projects · Egypt / Remote</p>
+  </div>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="container hero-content">
+        <p class="hero-kicker reveal">
+          Abdelhmeed Elshorbagy · IT Specialist · Full-Stack Product Builder
+        </p>
+        <h1>
+          <span class="mask-line" style="--line-delay:.05s"><span>I design and build</span></span>
+          <span class="mask-line" style="--line-delay:.15s"><span>digital products that</span></span>
+          <span class="mask-line" style="--line-delay:.25s"><span>move businesses <em>forward</em>.</span></span>
+        </h1>
+        <p class="hero-sub reveal" style="--reveal-delay:.35s">
+          I combine engineering, product design, and business strategy to turn complex
+          ideas into production-ready systems — from bilingual booking platforms to
+          e-commerce experiences and internal operations tools.
+        </p>
+        <div class="hero-actions reveal" style="--reveal-delay:.45s">
+          <span data-magnetic><a class="btn btn-primary" href="#work">
+            View selected work
+            <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a></span>
+          <span data-magnetic><a class="btn btn-ghost" href="#contact">Get in touch</a></span>
+        </div>
+        <div class="hero-meta reveal" style="--reveal-delay:.55s">
+          <span><span class="dot-live" aria-hidden="true"></span> Available for projects</span>
+          <span>Egypt · Working remotely worldwide</span>
+          <span>English · العربية</span>
+        </div>
+      </div>
+      <p class="hero-scroll" aria-hidden="true">Scroll</p>
+    </section>
+
+    <!-- ===== Selected Work ===== -->
+    <section class="section" id="work">
+      <div class="container">
+        <p class="section-label reveal"><span class="idx">01</span> Selected work</p>
+        <h2 class="section-title reveal">Products built end to end — from business problem to production.</h2>
+        <p class="section-intro reveal">
+          Two systems where I owned the full arc: understanding the operation,
+          designing the experience, and shipping the engineering.
+        </p>
+
+        <div class="work-list" style="margin-top: clamp(48px, 7vw, 88px);">
+
+          <!-- 1 · Amwag Attendance -->
+          <article class="case reveal">
+            <div class="case-info">
+              <span class="case-idx" aria-hidden="true">/ 01</span>
+              <p class="case-cat">Internal platform · Workforce operations</p>
+              <h3><a href="work/amwag-attendance.html">Amwag Attendance</a></h3>
+              <p class="case-desc">
+                A production-grade bilingual attendance platform: branch and IP
+                validation, role-based access, analytics, PDF reporting, and backup
+                workflows — built for operational reliability, not demos.
+              </p>
+              <div class="case-facts">
+                <p><span class="k">Role</span> System architecture · Full-stack build · Product ownership</p>
+                <p><span class="k">Focus</span> Governance, reporting, reliability, admin &amp; employee UX</p>
+              </div>
+              <div class="tags">
+                <span class="tag">Next.js</span><span class="tag">TypeScript</span>
+                <span class="tag">MySQL / MariaDB</span><span class="tag">RBAC</span>
+              </div>
+              <a class="case-link" href="work/amwag-attendance.html">
+                Explore case study
+                <span class="ring"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+              </a>
+            </div>
+            <a class="case-visual cover cover--attendance" href="work/amwag-attendance.html" aria-hidden="true" tabindex="-1"
+               style="--glow-x:82%; --glow-y:98%;">
+              <img class="cover-bgmark" src="assets/img/covers/amwag-wave.svg" alt="" loading="lazy" />
+              <span class="cover-grain"></span>
+              <span class="cover-brand">
+                <img class="cover-logo" src="assets/img/covers/amwag-wave.svg" alt="Amwag" loading="lazy" />
+                <span class="cover-name">Amwag · Attendance</span>
+              </span>
+              <span class="cover-stage">
+                <span class="cover-media"><img src="assets/img/covers/attendance.jpg" alt="Amwag Attendance admin dashboard" loading="lazy" /></span>
+              </span>
+              <span class="cover-tile"><img src="assets/img/covers/attendance-tile.jpg" alt="Attendance rate KPI tile" loading="lazy" /></span>
+              <span class="float-chip chip-tr ok"><span class="dot"></span> IP verified · Branch 03</span>
+              <span class="float-chip chip-br"><span class="dot"></span> Export PDF · شهر ٦</span>
+            </a>
+          </article>
+
+          <!-- 2 · DÖSE -->
+          <article class="case reveal">
+            <div class="case-info">
+              <span class="case-idx" aria-hidden="true">/ 02</span>
+              <p class="case-cat">E-commerce · Brand experience</p>
+              <h3><a href="work/dose-fragrance.html">DÖSE Fragrance</a></h3>
+              <p class="case-desc">
+                A premium Shopify experience for an Egyptian niche fragrance brand —
+                product storytelling, cart and discount logic, structured data, and a
+                “Find Your DÖSE” recommendation flow that guides discovery.
+              </p>
+              <div class="case-facts">
+                <p><span class="k">Role</span> Founder &amp; CEO · Brand direction · Shopify engineering</p>
+                <p><span class="k">Focus</span> Conversion-focused UX, discovery, SEO, visual storytelling</p>
+              </div>
+              <div class="tags">
+                <span class="tag">Shopify</span><span class="tag">Liquid</span>
+                <span class="tag">SEO / Schema</span><span class="tag">CRO</span>
+              </div>
+              <a class="case-link" href="work/dose-fragrance.html">
+                Explore case study
+                <span class="ring"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </a>
+            </div>
+            <a class="case-visual cover cover--dose" href="work/dose-fragrance.html" aria-hidden="true" tabindex="-1"
+               style="--glow-x:30%; --glow-y:6%;">
+              <img class="cover-bgmark" src="assets/img/covers/dose-crest-light.png" alt="" loading="lazy" />
+              <span class="cover-grain"></span>
+              <span class="cover-brand">
+                <img class="cover-logo" src="assets/img/covers/dose-crest-light.png" alt="DÖSE" loading="lazy" />
+                <span class="cover-name">DÖSE</span>
+              </span>
+              <span class="cover-stage">
+                <span class="cover-media"><img src="assets/img/covers/dose-apex.jpg" alt="DÖSE Apex eau de parfum bottle on warm golden sand" loading="lazy" /></span>
+              </span>
+              <span class="float-chip chip-a"><span class="dot"></span> Apex · Eau de Parfum</span>
+              <span class="float-chip chip-b"><span class="dot"></span> Find Your DÖSE</span>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- Private / NDA work -->
+        <aside class="private-work reveal" aria-label="Private and confidential work">
+          <div class="pw-head">
+            <span class="pw-kicker">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-lock"/></svg>
+              Private work
+            </span>
+            <h3>Not everything I build can be shown here.</h3>
+            <p>
+              A significant part of my work is delivered and running in production —
+              client platforms, e-commerce stores, and internal company systems that
+              stay private under NDAs and confidentiality rules. Built, shipped, in
+              use — just not mine to publish.
+            </p>
+          </div>
+          <ul class="pw-list">
+            <li>
+              <span class="pw-redact" aria-hidden="true">████████ ██████</span>
+              <span class="pw-cat">E-commerce stores · Multiple client builds</span>
+              <span class="pw-badge">Client-private</span>
+            </li>
+            <li>
+              <span class="pw-redact" aria-hidden="true">██████ ████████</span>
+              <span class="pw-cat">Learning management systems · Web platforms</span>
+              <span class="pw-badge">Under NDA</span>
+            </li>
+            <li>
+              <span class="pw-redact" aria-hidden="true">████ ███████ ███</span>
+              <span class="pw-cat">Mobile booking product · Travel &amp; transportation</span>
+              <span class="pw-badge">Company-confidential</span>
+            </li>
+            <li>
+              <span class="pw-redact" aria-hidden="true">███ █████████████</span>
+              <span class="pw-cat">IT infrastructure &amp; operations tooling</span>
+              <span class="pw-badge">Company-confidential</span>
+            </li>
+            <li class="pw-more">
+              <span class="pw-cat">+ more delivered projects available on request</span>
+            </li>
+          </ul>
+          <a class="case-link" href="#contact">
+            Happy to walk through them in a conversation
+            <span class="ring"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== Expertise ===== -->
+    <section class="section" id="expertise">
+      <div class="container">
+        <p class="section-label reveal"><span class="idx">02</span> Expertise</p>
+        <h2 class="section-title reveal">One connected system, not four separate jobs.</h2>
+        <p class="section-intro reveal">
+          Strategy informs design, design informs engineering, and engineering feeds
+          back into what the business can do. Select a discipline to see what it covers.
+        </p>
+
+        <div class="expertise-grid reveal" style="margin-top: clamp(40px, 6vw, 72px);">
+          <div class="cap-map" id="cap-map" role="tablist" aria-label="Capability groups">
+            <svg class="wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <line class="wire" data-cap="product"     x1="50" y1="50" x2="50" y2="14"/>
+              <line class="wire" data-cap="design"      x1="50" y1="50" x2="17" y2="50"/>
+              <line class="wire" data-cap="engineering" x1="50" y1="50" x2="83" y2="50"/>
+              <line class="wire" data-cap="leadership"  x1="50" y1="50" x2="50" y2="86"/>
+            </svg>
+            <span class="cap-core" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><use href="#ae-mark" style="color:#eceff4"/></svg>
+            </span>
+            <div class="cap-nodes-flow">
+              <button class="cap-node" role="tab" data-cap="product"
+                      style="top:14%; left:50%;" aria-selected="true">Product &amp; Strategy</button>
+              <button class="cap-node" role="tab" data-cap="design"
+                      style="top:50%; left:17%;" aria-selected="false">Design</button>
+              <button class="cap-node" role="tab" data-cap="engineering"
+                      style="top:50%; left:83%;" aria-selected="false">Engineering</button>
+              <button class="cap-node" role="tab" data-cap="leadership"
+                      style="top:86%; left:50%;" aria-selected="false">Technical Leadership</button>
+            </div>
+          </div>
+
+          <div class="cap-detail">
+            <div class="cap-panel" data-cap="product" role="tabpanel">
+              <h3>Product &amp; Strategy</h3>
+              <p class="cap-tagline">Start with the real workflow and the real constraint — then decide what deserves to be built.</p>
+              <ul>
+                <li>Product discovery</li>
+                <li>Business workflow analysis</li>
+                <li>Product architecture</li>
+                <li>User experience strategy</li>
+                <li>Feature prioritisation</li>
+              </ul>
+              <p class="cap-note">Applied in: Amwag Attendance workflow design · DÖSE discovery flow</p>
+            </div>
+            <div class="cap-panel" data-cap="design" role="tabpanel" hidden>
+              <h3>Design</h3>
+              <p class="cap-tagline">Interfaces that hold up in both directions — Arabic and English, mobile and desktop, happy path and edge case.</p>
+              <ul>
+                <li>UI / UX design</li>
+                <li>Design systems</li>
+                <li>Mobile application design</li>
+                <li>Responsive web design</li>
+                <li>Arabic-first &amp; bilingual interfaces</li>
+                <li>Interactive prototyping</li>
+              </ul>
+              <p class="cap-note">Applied in: Amwag bilingual system · DÖSE brand experience</p>
+            </div>
+            <div class="cap-panel" data-cap="engineering" role="tabpanel" hidden>
+              <h3>Engineering</h3>
+              <p class="cap-tagline">Production systems with real users, real data, and real failure modes — not prototypes.</p>
+              <ul>
+                <li>Next.js &amp; React</li>
+                <li>TypeScript &amp; Node.js</li>
+                <li>MySQL / MariaDB</li>
+                <li>Supabase</li>
+                <li>Prisma &amp; Drizzle</li>
+                <li>Shopify &amp; Liquid</li>
+                <li>API integrations</li>
+                <li>Auth &amp; role-based access</li>
+                <li>Testing &amp; production reliability</li>
+              </ul>
+              <p class="cap-note">Applied in: Amwag Attendance platform · DÖSE Shopify build</p>
+            </div>
+            <div class="cap-panel" data-cap="leadership" role="tabpanel" hidden>
+              <h3>Technical Leadership</h3>
+              <p class="cap-tagline">Turning business requirements into technical systems — and owning the decisions that keep them running.</p>
+              <ul>
+                <li>System architecture</li>
+                <li>Technical decision-making</li>
+                <li>Operational automation</li>
+                <li>Security &amp; backup planning</li>
+                <li>Requirements → technical systems</li>
+              </ul>
+              <p class="cap-note">Applied in: attendance governance, backup &amp; restore workflows</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Philosophy ===== -->
+    <section class="section" id="philosophy">
+      <div class="container">
+        <p class="section-label reveal"><span class="idx">03</span> Working philosophy</p>
+        <div class="philosophy-list">
+          <div class="principle reveal">
+            <span class="num">P—01</span>
+            <h3>Understand before building</h3>
+            <p>Begin with the real workflow, the business constraints, and what users
+               actually need to get done. The best interface for the wrong problem is
+               still the wrong product.</p>
+          </div>
+          <div class="principle reveal">
+            <span class="num">P—02</span>
+            <h3>Design the complete system</h3>
+            <p>Think beyond individual screens: states, roles, data, operations, and
+               edge cases. A product is everything that happens when things go right —
+               and when they don't.</p>
+          </div>
+          <div class="principle reveal">
+            <span class="num">P—03</span>
+            <h3>Ship with reliability</h3>
+            <p>Build products that are maintainable, testable, and secure — with the
+               backups, access control, and monitoring that real users deserve from
+               day one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section-label reveal"><span class="idx">04</span> About</p>
+        <div class="about-grid">
+          <div class="portrait-slot reveal">
+            <picture>
+              <source srcset="assets/img/portrait.webp" type="image/webp">
+              <img class="portrait-photo" src="assets/img/portrait.png" alt="Portrait of Abdelhmeed Elshorbagy" loading="lazy" width="1400" height="1750">
+            </picture>
+          </div>
+          <div class="about-copy">
+            <p class="lede reveal">
+              Abdelhmeed Elshorbagy is an IT specialist, full-stack product builder, and
+              product designer focused on creating complete digital systems.
+            </p>
+            <p class="reveal">
+              His work sits at the intersection of business operations, user experience,
+              and software engineering. He enjoys taking complicated workflows — a
+              transportation network's booking rules, a company's attendance governance,
+              a brand's path from discovery to checkout — and transforming them into
+              products that feel clear, useful, and carefully crafted.
+            </p>
+            <p class="reveal">
+              Alongside building products, he studies Computer Science and Artificial
+              Intelligence, which keeps the engineering grounded in fundamentals while
+              the product work stays grounded in real businesses.
+            </p>
+            <div class="about-points">
+              <div class="about-point reveal">
+                <span class="k">Based in</span>
+                <span class="v">Egypt — working remotely with teams worldwide</span>
+              </div>
+              <div class="about-point reveal">
+                <span class="k">Languages</span>
+                <span class="v">English &amp; Arabic — bilingual product design</span>
+              </div>
+              <div class="about-point reveal">
+                <span class="k">Education</span>
+                <span class="v">B.Sc. Computer Science &amp; AI — Minya National University, 2024–2028 (expected)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section-label reveal"><span class="idx">05</span> Experience</p>
+        <h2 class="section-title reveal">Increasing scope, real systems.</h2>
+
+        <div class="timeline reveal" style="margin-top: clamp(36px, 5vw, 56px);">
+          <div class="tl-item">
+            <span class="tl-when">Feb 2025 — Present</span>
+            <div class="tl-body">
+              <h3>IT Specialist</h3>
+              <p class="tl-org">Amwag Travel</p>
+              <p>Manages IT infrastructure, network security, and day-to-day operations
+                 while building the company's internal products — designed and shipped
+                 the bilingual attendance platform end to end, architecture and design
+                 system included.</p>
+            </div>
+            <span class="tl-links"><a href="work/amwag-attendance.html">View system →</a></span>
+          </div>
+          <div class="tl-item">
+            <span class="tl-when">Oct 2025 — Present</span>
+            <div class="tl-body">
+              <h3>Founder &amp; CEO</h3>
+              <p class="tl-org">DÖSE — Egyptian niche fragrance brand</p>
+              <p>Founded and runs the brand end to end — brand direction and a
+                 conversion-focused Shopify build: product page UX, discount logic,
+                 structured data, and the "Find Your DÖSE" discovery experience.</p>
+            </div>
+            <span class="tl-links"><a href="work/dose-fragrance.html">View project →</a></span>
+          </div>
+          <div class="tl-item">
+            <span class="tl-when">Jul 2022 — Feb 2025</span>
+            <div class="tl-body">
+              <h3>Ticketing → Customer Service</h3>
+              <p class="tl-org">Amwag Travel</p>
+              <p>Started at the ticketing desk, became the company's first customer
+                 service employee, and was promoted into the IT role — the youngest
+                 to hold it across the company's branches. Years inside the operation
+                 that the products are now built for.</p>
+            </div>
+            <span></span>
+          </div>
+          <div class="tl-item">
+            <span class="tl-when">Jun 2021 — Aug 2023</span>
+            <div class="tl-body">
+              <h3>Founder — abameda store</h3>
+              <p class="tl-org">Online digital-products store</p>
+              <p>Built and ran an online store for digital gaming products — gift
+                 cards, game keys, and licenses — serving customers across Egypt and
+                 the GCC, with sourcing, pricing, and support handled end to end.</p>
+            </div>
+            <span></span>
+          </div>
+          <div class="tl-item">
+            <span class="tl-when">2024 — 2028 (expected)</span>
+            <div class="tl-body">
+              <h3>B.Sc. Computer Science &amp; Artificial Intelligence</h3>
+              <p class="tl-org">Minya National University (MNU)</p>
+              <p>Formal grounding in algorithms, systems, and AI alongside full-time
+                 product work.</p>
+            </div>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="timeline-cta reveal">
+          <span data-magnetic><a class="btn btn-ghost" href="assets/Abdelhmeed-Elshorbagy-CV.pdf" target="_blank" rel="noopener" title="Download CV">
+            Download full CV
+            <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+          </a></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-mark" id="contact-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 50 L34 14" stroke="#eceff4"/>
+            <path d="M53 14 H34 V50 H53" stroke="#eceff4"/>
+            <path d="M23 32 H49" stroke="#55b7ff"/>
+          </svg>
+        </div>
+        <h2 class="reveal">Have a complex idea?<br/>Let's turn it into a <em>product</em>.</h2>
+        <p class="contact-sub reveal">
+          Open to product collaborations, technical leadership opportunities,
+          and ambitious digital projects.
+        </p>
+        <div class="contact-actions reveal">
+          <span data-magnetic><a class="btn btn-primary" href="mailto:abdelhmeed.mohsen@gmail.com">
+            Start a conversation
+            <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a></span>
+          <button class="email-copy" type="button" data-copy-email="abdelhmeed.mohsen@gmail.com">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-copy"/></svg>
+            <span class="copy-label">abdelhmeed.mohsen@gmail.com</span>
+          </button>
+        </div>
+        <div class="contact-socials reveal">
+          <a class="social-pill" href="https://www.linkedin.com/in/elshorbagy/" target="_blank" rel="noopener" title="LinkedIn">LinkedIn</a>
+          <a class="social-pill" href="https://github.com/abameda" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+          <a class="social-pill" href="assets/Abdelhmeed-Elshorbagy-CV.pdf" target="_blank" rel="noopener" title="Download CV">CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="sig" href="#top" aria-label="AE — back to top">
+        <svg viewBox="0 0 64 64"><use href="#ae-mark" style="color:#eceff4"/></svg>
+        <small>© <span id="year">2026</span> Abdelhmeed Elshorbagy</small>
+      </a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#work">Work</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <small>Designed &amp; built by AE · Egypt</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
