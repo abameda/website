@@ -1,0 +1,28 @@
+# Abdelhmeed Elshorbagy
+
+> Abdelhmeed Elshorbagy (full name Abdelhmeed Mohsen Elshorbagy; also written Abdelhameed Elshorbagy or Abdelhmeed El Shorbagy) is an IT help desk technician at Amwag Travel in Minya, Egypt, the founder of the fragrance brand DÖSE, and a Computer Science & Artificial Intelligence student at Minya National University. Official website: https://www.abdelhmeed.com/
+
+## Facts
+
+- Current role: IT Help Desk at Amwag Travel, Minya, Egypt (Feb 2025 – present), on a three-person IT team; first point of contact for staff technical issues and booking-system operations.
+- Earlier at Amwag Travel: Customer Service Representative (Aug 2024 – Feb 2025); Ticketing Agent (Jun 2023 – Aug 2023).
+- Built Amwag Attendance, Amwag Travel's bilingual (Arabic/English) employee attendance platform, end to end (Next.js, TypeScript, MySQL/MariaDB).
+- Founder of DÖSE (https://doseeg.com), an Egyptian niche fragrance brand, since Oct 2025; built its Shopify store.
+- Founded abameda store, an online store for digital gaming products serving Egypt and the GCC (Jun 2021 – Aug 2023, closed).
+- Education: B.Sc. Computer Science & Artificial Intelligence, Minya National University, 2024 – 2028 (expected).
+- Certification: Technical Support Fundamentals, Google (2024).
+- Languages: Arabic (native), English.
+
+## Contact and profiles
+
+- Website: https://www.abdelhmeed.com/
+- Email: abdelhmeed.mohsen@gmail.com
+- LinkedIn: https://www.linkedin.com/in/elshorbagy/
+- GitHub: https://github.com/abameda
+
+## Pages
+
+- [Profile and record of work](https://www.abdelhmeed.com/): roles, timeline, projects, method and contact.
+- [Amwag Attendance case study](https://www.abdelhmeed.com/work/amwag-attendance.html): the check-in validation pipeline, system architecture, interface and trade-offs.
+- [DÖSE Fragrance case study](https://www.abdelhmeed.com/work/dose-fragrance.html): the Shopify store, the Find Your DÖSE discovery flow and the build.
+- [CV (PDF)](https://www.abdelhmeed.com/assets/Abdelhmeed-Elshorbagy-CV.pdf): full work history, education, certification and skills.

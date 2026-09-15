@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yosr Educational Platform — Case Study · Abdelhmeed Elshorbagy</title>
+  <meta name="description" content="Case study: an Arabic-first learning management system — authentication and roles, course architecture, payments, and secure video delivery on Next.js, Supabase, Prisma, and TypeScript." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Yosr — an Arabic-first learning platform built to scale" />
+  <meta property="og:description" content="Arabic-first UX, secure video delivery, payments, and a scalable product architecture for students and instructors." />
+  <meta property="og:image" content="../assets/og.png" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="legacy/main.css" />
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="ae-mark" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 50 L34 14" stroke="currentColor"/>
+        <path d="M53 14 H34 V50 H53" stroke="currentColor"/>
+        <path d="M23 32 H49" stroke="#55b7ff"/>
+      </g>
+      <g id="i-arrow"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="i-check"><path d="M3 8.5 6.5 12 13 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="../index.html" aria-label="AE — home">
+        <svg viewBox="0 0 64 64"><use href="#ae-mark" style="color:#eceff4"/></svg>
+        <span class="logo-name">Abdelhmeed Elshorbagy</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="../index.html#contact">
+        <span class="dot-live" aria-hidden="true"></span>
+        Available for projects
+      </a>
+      <button class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#expertise">Expertise</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+
+  <main id="main">
+    <section class="cs-hero">
+      <div class="container">
+        <p class="crumb reveal"><a href="../index.html#work">Selected work</a> <span>/</span> Case study 04</p>
+        <h1 class="reveal">Yosr — learning that speaks Arabic first.</h1>
+        <p class="cs-lede reveal">
+          An Arabic-first learning management system for students and instructors:
+          authentication and roles, course and lesson architecture, payments, and
+          secure video delivery — built as a product architecture meant to grow.
+        </p>
+        <div class="cs-facts reveal">
+          <div class="cs-fact"><span class="k">Category</span><span class="v">Web platform · Education</span></div>
+          <div class="cs-fact"><span class="k">Role</span><span class="v">Product architecture · Full-stack engineering · UX design</span></div>
+          <div class="cs-fact"><span class="k">Stack</span><span class="v">Next.js · Supabase · Prisma · TypeScript</span></div>
+          <div class="cs-fact"><span class="k">Timeline</span><span class="v"><span class="placeholder-tag">add dates</span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-body">
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">01</span><h2>Context</h2></aside>
+        <div class="cs-prose">
+          <p>Most learning platforms treat Arabic as a translation target: an LTR
+             product mirrored at the last minute, with Arabic text squeezed into
+             layouts designed for English. Yosr starts from the opposite premise —
+             an educational platform where Arabic is the native language of the
+             interface, the content, and the design decisions.</p>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">02</span><h2>Business problem</h2></aside>
+        <div class="cs-prose">
+          <ul>
+            <li>Instructors need a serious platform: course management, enrolment,
+                payments, and control over who can watch their content.</li>
+            <li>Paid video content must actually be protected — casual downloading and
+                link-sharing directly threaten the business model.</li>
+            <li>The platform had to launch lean but be architected for growth in
+                courses, students, and instructors.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">03</span><h2>User problem</h2></aside>
+        <div class="cs-prose">
+          <p>A <strong>student</strong> needs a distraction-free path: find the course,
+             pay once, and continue exactly where they left off — in an interface that
+             reads naturally in Arabic. An <strong>instructor</strong> needs to publish
+             and organise content, see their students, and trust that paid lessons stay
+             behind the paywall.</p>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">04</span><h2>Constraints</h2></aside>
+        <div class="cs-prose">
+          <ul>
+            <li>RTL-first everything: layout, typography, iconography direction, and
+                component behavior.</li>
+            <li>Video delivery secure enough to protect revenue without punishing
+                legitimate students.</li>
+            <li>A lean stack a small team can operate — no infrastructure that needs
+                its own team.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">05</span><h2>My role</h2></aside>
+        <div class="cs-prose">
+          <p>I designed and built the platform: the data model and role system, the
+             Arabic-first interface, the enrolment and payment flows, and the secure
+             video delivery pipeline — full-stack ownership from schema to screen.</p>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">06</span><h2>Product strategy</h2></aside>
+        <div class="cs-prose">
+          <p>The strategy: <strong>be a product, not a plugin.</strong> Rather than
+             assembling disconnected tools — a video host here, a payment link there —
+             Yosr unifies identity, enrolment, payment, and playback into one coherent
+             system, so access control can actually be enforced and the student
+             experience stays seamless.</p>
+        </div>
+      </section>
+
+      <!-- Student flow -->
+      <div class="cs-band reveal">
+        <div class="container">
+          <div class="flow" role="img" aria-label="Student flow: browse courses, enrol and pay, access granted, watch securely, track progress">
+            <span class="step">Browse courses</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span class="step">Enrol &amp; pay</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span class="step hot">Access granted by role</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span class="step hot">Watch — securely streamed</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span class="step">Progress saved</span>
+          </div>
+          <p class="band-note">Enrolment, payment, and playback governed by one access model.</p>
+        </div>
+      </div>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">07</span><h2>UX &amp; system architecture</h2></aside>
+        <div class="cs-prose">
+          <ul>
+            <li><strong>Role-driven surfaces</strong> — students, instructors, and
+                administrators see different products on the same data model.</li>
+            <li><strong>Course architecture</strong> — courses → sections → lessons,
+                with enrolment state controlling access at every level.</li>
+            <li><strong>Continue-watching as the home screen</strong> — the platform
+                optimises for returning students, because learning is a habit, not a
+                transaction.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Architecture diagram -->
+      <div class="cs-band reveal">
+        <div class="container">
+          <div class="arch" role="img" aria-label="Architecture: Next.js RTL-first client, TypeScript with Prisma access control and payments, Supabase auth database and protected storage">
+            <div class="layer">
+              <span class="l-name">Client</span>
+              <div class="l-items"><i>Next.js</i><i>RTL-first UI</i><i>Student surface</i><i>Instructor surface</i></div>
+            </div>
+            <span class="link-col" aria-hidden="true">↓ ↑</span>
+            <div class="layer">
+              <span class="l-name">Service</span>
+              <div class="l-items"><i>TypeScript</i><i>Prisma data model</i><i>Enrolment &amp; payments</i><i>Access checks</i></div>
+            </div>
+            <span class="link-col" aria-hidden="true">↓ ↑</span>
+            <div class="layer">
+              <span class="l-name">Platform</span>
+              <div class="l-items"><i>Supabase auth</i><i>Postgres</i><i>Protected storage</i><i>Signed video access</i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">08</span><h2>Design decisions</h2></aside>
+        <div class="cs-prose">
+          <p>Arabic typography led the design system: type scale, line heights, and
+             component spacing were tuned for Arabic script first, then verified for
+             Latin. Navigation, progress, and video controls follow RTL reading
+             logic naturally. The result is an interface Arabic-speaking students
+             don't have to mentally translate.</p>
+        </div>
+      </section>
+
+      <div class="container reveal">
+        <div class="asset-slot">
+          <span>[ Placeholder — add product screens: course catalogue, lesson player,
+          instructor dashboard, and enrolment flow ]</span>
+        </div>
+      </div>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">09</span><h2>Technical implementation</h2></aside>
+        <div class="cs-prose">
+          <ul>
+            <li><strong>Next.js + TypeScript</strong> app with server-enforced access
+                control on every content route.</li>
+            <li><strong>Prisma</strong> schema modelling users, roles, courses,
+                enrolments, payments, and progress as one typed graph.</li>
+            <li><strong>Supabase</strong> for authentication, Postgres, and protected
+                storage — signed, expiring access to video instead of public URLs.</li>
+            <li><strong>Payment integration</strong> tied directly to enrolment state,
+                so access is granted and revoked by the system, not by hand.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">10</span><h2>Challenges &amp; trade-offs</h2></aside>
+        <div class="cs-prose">
+          <p><strong>Protection vs. playback experience.</strong> Perfect content
+             protection doesn't exist; hostile-proof DRM would have hurt every
+             legitimate student. The trade: signed, expiring, identity-bound access
+             that defeats casual sharing while keeping playback instant.</p>
+          <p><strong>Scaling ambition vs. launch scope.</strong> The architecture
+             supports growth — but the launch stayed lean. Designing the data model
+             for the future while building only the present took restraint.</p>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">11</span><h2>Outcome</h2></aside>
+        <div class="cs-prose">
+          <p>Qualitative outcomes — stated honestly:</p>
+          <div class="outcomes">
+            <div class="outcome-card">
+              <svg viewBox="0 0 16 16"><use href="#i-check"/></svg>
+              <p><strong>Genuinely Arabic-first</strong>An LMS designed in Arabic, not
+              translated into it.</p>
+            </div>
+            <div class="outcome-card">
+              <svg viewBox="0 0 16 16"><use href="#i-check"/></svg>
+              <p><strong>Revenue-safe content</strong>Paid lessons stay behind
+              identity-bound, expiring access.</p>
+            </div>
+            <div class="outcome-card">
+              <svg viewBox="0 0 16 16"><use href="#i-check"/></svg>
+              <p><strong>Room to grow</strong>The typed data model absorbs new courses,
+              roles, and features without rework.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">12</span><h2>Lessons learned</h2></aside>
+        <div class="cs-prose">
+          <p>"Arabic-first" is an architecture decision, not a CSS property. Direction,
+             typography, and language shape the data model, the components, and the
+             defaults — and retrofitting any of it later costs more than starting
+             there. The same lesson generalises: whatever your product's core promise
+             is, build it into the foundation, not the paint.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="cs-next">
+      <div class="container">
+        <span class="k">Back to the beginning</span>
+        <a class="next-title" href="amwag-attendance.html">
+          Amwag Attendance
+          <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="sig" href="../index.html" aria-label="AE — home">
+        <svg viewBox="0 0 64 64"><use href="#ae-mark" style="color:#eceff4"/></svg>
+        <small>© <span id="year">2026</span> Abdelhmeed Elshorbagy</small>
+      </a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <small>Designed &amp; built by AE · Egypt</small>
+    </div>
+  </footer>
+
+  <script src="legacy/main.js" defer></script>
+</body>
+</html>

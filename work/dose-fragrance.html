@@ -1,317 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DÖSE Fragrance — Case Study · Abdelhmeed Elshorbagy</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DÖSE Fragrance — case study · Abdelhmeed Elshorbagy</title>
   <meta name="description" content="Case study: a premium Shopify experience for an Egyptian niche fragrance brand — product storytelling, cart and discount logic, structured data, and the Find Your DÖSE discovery flow." />
+  <meta name="theme-color" content="#2B1611" />
+  <link rel="canonical" href="https://www.abdelhmeed.com/work/dose-fragrance.html" />
+  <meta name="author" content="Abdelhmeed Elshorbagy" />
   <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Abdelhmeed Elshorbagy" />
+  <meta property="og:url" content="https://www.abdelhmeed.com/work/dose-fragrance.html" />
   <meta property="og:title" content="DÖSE — a niche fragrance brand's premium e-commerce experience" />
   <meta property="og:description" content="Brand direction, conversion-focused UX, and Shopify engineering for an Egyptian niche fragrance house." />
-  <meta property="og:image" content="../assets/og.svg" />
+  <meta property="og:image" content="https://www.abdelhmeed.com/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://www.abdelhmeed.com/work/dose-fragrance.html#article",
+        "headline": "DÖSE Fragrance — case study",
+        "description": "How Abdelhmeed Elshorbagy, founder of DÖSE, built the brand's Shopify store: product storytelling, cart and discount logic, structured data and the Find Your DÖSE discovery flow.",
+        "url": "https://www.abdelhmeed.com/work/dose-fragrance.html",
+        "image": "https://www.abdelhmeed.com/assets/img/covers/dose-apex.webp",
+        "inLanguage": "en",
+        "dateModified": "2026-09-15",
+        "author": { "@type": "Person", "@id": "https://www.abdelhmeed.com/#person", "name": "Abdelhmeed Elshorbagy", "url": "https://www.abdelhmeed.com/" },
+        "isPartOf": { "@id": "https://www.abdelhmeed.com/#website" },
+        "about": {
+          "@type": "Organization",
+          "@id": "https://www.abdelhmeed.com/#dose",
+          "name": "DÖSE",
+          "url": "https://doseeg.com/",
+          "founder": { "@id": "https://www.abdelhmeed.com/#person" }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Abdelhmeed Elshorbagy", "item": "https://www.abdelhmeed.com/" },
+          { "@type": "ListItem", "position": 2, "name": "DÖSE Fragrance", "item": "https://www.abdelhmeed.com/work/dose-fragrance.html" }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
-  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa:wght@400..800&amp;family=Martian+Mono:wdth,wght@87.5,400&amp;family=Readex+Pro:wght@300..600&amp;display=swap" />
   <link rel="stylesheet" href="../assets/css/main.css" />
-  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <g id="ae-mark" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 50 L34 14" stroke="currentColor"/>
-        <path d="M53 14 H34 V50 H53" stroke="currentColor"/>
-        <path d="M23 32 H49" stroke="#55b7ff"/>
-      </g>
-      <g id="i-arrow"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
-      <g id="i-check"><path d="M3 8.5 6.5 12 13 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
-    </defs>
-  </svg>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="nav" id="nav">
-    <div class="nav-inner">
-      <a class="nav-logo" href="../index.html" aria-label="AE — home">
-        <svg viewBox="0 0 64 64"><use href="#ae-mark" style="color:#eceff4"/></svg>
-        <span class="logo-name">Abdelhmeed Elshorbagy</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="../index.html#work">Work</a>
-        <a href="../index.html#expertise">Expertise</a>
-        <a href="../index.html#about">About</a>
-        <a href="../index.html#contact">Contact</a>
-      </nav>
-      <a class="nav-cta" href="../index.html#contact">
-        <span class="dot-live" aria-hidden="true"></span>
-        Available for projects
-      </a>
-      <button class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
-        <span></span><span></span>
-      </button>
-    </div>
+  <header class="bar">
+    <a class="sig" href="../index.html" aria-label="Abdelhmeed Elshorbagy, back to the register">
+      <svg class="mark" viewBox="0 0 60 44" aria-hidden="true" focusable="false"><path d="M2 42 13 6l11 36M50 6H32v36h18" fill="none" stroke="currentColor" stroke-width="5"/><path d="M6.3 28H60" fill="none" stroke="currentColor" stroke-width="3.3"/></svg>
+      <span class="rule-line" aria-hidden="true"></span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="../index.html">Register</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#record">Record</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button class="toggle" type="button" data-sources-toggle aria-pressed="false">
+      <span class="box" aria-hidden="true"></span>Sources <span class="state" aria-hidden="true"></span>
+    </button>
   </header>
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="../index.html#work">Work</a>
-    <a href="../index.html#expertise">Expertise</a>
-    <a href="../index.html#about">About</a>
-    <a href="../index.html#contact">Contact</a>
-  </div>
 
   <main id="main">
-    <section class="cs-hero">
-      <div class="container">
-        <p class="crumb reveal"><a href="../index.html#work">Selected work</a> <span>/</span> Case study 03</p>
-        <h1 class="reveal">DÖSE — selling scent through a screen.</h1>
-        <p class="cs-lede reveal">
-          A premium Shopify experience for an Egyptian niche fragrance brand:
-          visual storytelling that carries what the customer can't smell, a guided
-          "Find Your DÖSE" discovery flow, and the conversion mechanics — cart,
-          discounts, SEO — engineered underneath.
-        </p>
-        <div class="cs-facts reveal">
-          <div class="cs-fact"><span class="k">Category</span><span class="v">E-commerce · Brand experience</span></div>
-          <div class="cs-fact"><span class="k">Role</span><span class="v">Founder &amp; CEO · Brand direction · UX design · Shopify engineering</span></div>
-          <div class="cs-fact"><span class="k">Stack</span><span class="v">Shopify · Liquid · Structured data</span></div>
-          <div class="cs-fact"><span class="k">Timeline</span><span class="v">Oct 2025 — Present</span></div>
+
+    <!-- ===== Title block ===== -->
+    <section class="tb bleed stock-dose" aria-labelledby="cs-h">
+      <p class="crumb"><a href="../index.html">Register</a> / <a href="../index.html#work">Work</a> / DÖSE Fragrance</p>
+      <div class="tb-grid">
+        <p class="lab">Entry <span lang="ar" dir="rtl">قيد</span></p>
+        <div class="tb-main">
+          <h1 class="cs-title" id="cs-h" style="view-transition-name: entry-dose">DÖSE Fragrance</h1>
+          <p class="cs-line">Selling scent through a screen.</p>
+          <p class="cs-lede">A premium Shopify experience for an Egyptian niche fragrance brand: visual storytelling that carries what the customer can’t smell, a guided “Find Your DÖSE” discovery flow, and the conversion mechanics — cart, discounts, SEO — engineered underneath.</p>
         </div>
+        <figure class="tb-ex ex">
+          <img src="../assets/img/covers/dose-apex-520.webp" srcset="../assets/img/covers/dose-apex-520.webp 520w, ../assets/img/covers/dose-apex.webp 700w" sizes="(min-width: 1100px) 28vw, 92vw" width="700" height="1015" fetchpriority="high" alt="DÖSE Apex eau de parfum bottle with a walnut cap and an etched black label, lying on golden sand" />
+          <figcaption><b>Apex, eau de parfum.</b> Still life does the work a fragrance counter would.</figcaption>
+          <span class="prov">DÖSE product photography</span>
+        </figure>
+        <dl class="tb-cells">
+          <div><dt>Category</dt><dd>E-commerce · Brand experience</dd></div>
+          <div><dt>Role</dt><dd>Founder · Brand direction · UX design · Shopify engineering</dd></div>
+          <div><dt>Stack</dt><dd>Shopify · Liquid · Structured data</dd></div>
+          <div><dt>Timeline</dt><dd><time datetime="2025-10">Oct 2025</time> – present</dd></div>
+          <div><dt>Status</dt><dd><span class="st st--live">Running</span><a class="src" href="#store"><b>Shown</b></a></dd></div>
+          <div><dt>Evidence</dt><dd>5 captures of the live store at doseeg.com</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== Summary ===== -->
+    <section class="summary" aria-label="Summary">
+      <div class="entry">
+        <p class="lab">Problem <span lang="ar" dir="rtl">المشكلة</span></p>
+        <p class="prose">Niche fragrance sells on identity and story, but its most important quality, the scent, can’t pass through a screen, and undecided visitors leave.</p>
+      </div>
+      <div class="entry">
+        <p class="lab">My part <span lang="ar" dir="rtl">دوري</span></p>
+        <p class="prose">Brand direction for the store, the product page and discovery UX, and the Shopify implementation: Liquid templates, cart and discount logic, structured data, and performance work.</p>
+      </div>
+      <div class="entry">
+        <p class="lab">Outcome <span lang="ar" dir="rtl">النتيجة</span></p>
+        <p class="prose">A brand-true store, a designed path from undecided to a confident choice, and a catalogue search engines can read. Qualitative outcomes only. No invented figures.</p>
       </div>
     </section>
 
     <div class="cs-body">
+      <nav class="toc" aria-labelledby="toc-h">
+        <h2 class="toc-h" id="toc-h">On this record</h2>
+        <ol>
+          <li><a href="#situation">The situation</a></li>
+          <li><a href="#approach">The approach</a></li>
+          <li><a href="#conversation">Find Your DÖSE</a></li>
+          <li><a href="#store">The store</a></li>
+          <li><a href="#build">The build</a></li>
+          <li><a href="#tradeoffs">Trade-offs</a></li>
+          <li><a href="#outcome">Outcome &amp; lessons</a></li>
+        </ol>
+      </nav>
 
-      <section class="cs-section container reveal">
-        <aside><span class="cs-num">01</span><h2>Context</h2></aside>
-        <div class="cs-prose">
-          <p>DÖSE is an Egyptian niche fragrance brand competing in a category where
-             the product's most important quality — its scent — cannot pass through the
-             screen. Everything the store communicates has to be carried by imagery,
-             language, pacing, and trust.</p>
-        </div>
-      </section>
+      <div class="chapters">
 
-      <section class="cs-section container reveal">
-        <aside><span class="cs-num">02</span><h2>Business problem</h2></aside>
-        <div class="cs-prose">
-          <ul>
-            <li>Niche fragrance sells on identity and story; a generic Shopify theme
-                undermines both.</li>
-            <li>Undecided visitors leave: without guidance, choosing a fragrance online
-                is a gamble customers avoid.</li>
-            <li>Organic discovery mattered — the brand needed search engines to
-                understand its catalogue properly.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="cs-section container reveal">
-        <aside><span class="cs-num">03</span><h2>User problem</h2></aside>
-        <div class="cs-prose">
-          <p>"Will I like it?" is the question every fragrance customer is silently
-             asking. The experience has to replace the counter test: describe scent in
-             evocative but concrete language, situate each fragrance in a mood and
-             moment, and guide the undecided instead of presenting a wall of bottles.</p>
-        </div>
-      </section>
-
-      <section class="cs-section container reveal">
-        <aside><span class="cs-num">04</span><h2>Constraints</h2></aside>
-        <div class="cs-prose">
-          <ul>
-            <li>Shopify's theme architecture — premium feel within Liquid's rendering
-                model and the platform's checkout boundaries.</li>
-            <li>Performance: rich visuals could not cost the mobile experience, where
-                most traffic lives.</li>
-            <li>The brand team needed to manage products and campaigns without a
-                developer in the loop.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="cs-section container reveal">
-        <aside><span class="cs-num">05</span><h2>My role</h2></aside>
-        <div class="cs-prose">
-          <p>I owned the digital experience: brand direction for the store, the product
-             page and discovery UX, and the Shopify implementation — Liquid templates,
-             cart and discount logic, structured data, and performance work.</p>
-        </div>
-      </section>
-
-      <section class="cs-section container reveal">
-        <aside><span class="cs-num">06</span><h2>Product strategy</h2></aside>
-        <div class="cs-prose">
-          <p>Two paths, deliberately designed: <strong>customers who know</strong> get a
-             fast, confident route to product and checkout; <strong>customers who
-             don't</strong> get "Find Your DÖSE" — a short, sensory quiz that narrows
-             the catalogue to a personal recommendation. The store's job is to make
-             sure nobody leaves because they couldn't decide.</p>
-        </div>
-      </section>
-
-      <!-- Discovery flow -->
-      <div class="cs-band reveal">
-        <div class="container">
-          <div class="flow" role="img" aria-label="Find Your DÖSE flow: mood, occasion, intensity, recommendation, product page">
-            <span class="step">How do you want to feel?</span>
-            <span class="arrow" aria-hidden="true">→</span>
-            <span class="step">When will you wear it?</span>
-            <span class="arrow" aria-hidden="true">→</span>
-            <span class="step">How bold?</span>
-            <span class="arrow" aria-hidden="true">→</span>
-            <span class="step hot">Your DÖSE</span>
-            <span class="arrow" aria-hidden="true">→</span>
-            <span class="step">Product page</span>
+        <!-- The situation -->
+        <section class="chapter" id="situation" aria-labelledby="situation-h">
+          <div class="chapter-head"><h2 id="situation-h">The situation</h2><p lang="ar" dir="rtl">السياق</p></div>
+          <div class="clause">
+            <h3>Context</h3>
+            <div class="prose"><p>DÖSE is an Egyptian niche fragrance brand competing in a category where the product’s most important quality — its scent — cannot pass through the screen. Everything the store communicates has to be carried by imagery, language, pacing, and trust.</p></div>
           </div>
-          <p class="band-note">"Find Your DÖSE" — replacing the fragrance counter with a conversation.</p>
-        </div>
-      </div>
-
-      <section class="cs-section container reveal">
-        <aside><span class="cs-num">07</span><h2>UX &amp; system architecture</h2></aside>
-        <div class="cs-prose">
-          <ul>
-            <li><strong>Product pages as stories</strong> — scent pyramid, mood
-                framing, and imagery sequenced before specifications and price
-                anxiety.</li>
-            <li><strong>Cart designed for momentum</strong> — clear discount states, no
-                surprise costs, and a short path to Shopify's checkout.</li>
-            <li><strong>Discovery quiz mapped to product metadata</strong> — recommendations
-                come from structured attributes the brand team can edit, not hardcoded
-                rules.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="cs-section container reveal">
-        <aside><span class="cs-num">08</span><h2>Design decisions</h2></aside>
-        <div class="cs-prose">
-          <p>The visual direction leans into stillness: large imagery, disciplined
-             typography, and restrained motion — closer to editorial perfume
-             photography than to a discount storefront. Language does the heavy
-             lifting, describing scent in scenes and moments rather than ingredient
-             lists alone.</p>
-        </div>
-      </section>
-
-      <!-- Store visuals -->
-      <div class="container reveal">
-        <div class="cs-shots">
-          <p class="shots-label">The store</p>
-          <div class="shots-wide">
-            <figure class="shot">
-              <span class="frame"><img src="../assets/img/dose/01-home.png" alt="DÖSE homepage hero: luxury eau de parfum bottles staged as still life on sand with driftwood" loading="lazy" /></span>
-              <figcaption><b>Home</b> — an editorial hero that treats the product as still life. "Find Your DÖSE" is always one tap away for the undecided.</figcaption>
-            </figure>
-            <figure class="shot">
-              <span class="frame"><img src="../assets/img/dose/02-home-ritual.png" alt="Homepage section headed 'Small amounts, lasting presence' with a moody perfume photograph" loading="lazy" /></span>
-              <figcaption><b>Brand story</b> — "measured in feeling." Scent is sold in scenes and rituals, carrying what a screen can't.</figcaption>
-            </figure>
-            <figure class="shot">
-              <span class="frame"><img src="../assets/img/dose/03-home-moods.png" alt="Homepage 'Find the bottle that fits the hour' section with For Him, For Her, and Unisex flat-lays" loading="lazy" /></span>
-              <figcaption><b>Shop by mood</b> — "find the bottle that fits the hour." Entry points by feeling and occasion, not just a product grid.</figcaption>
-            </figure>
-            <figure class="shot">
-              <span class="frame"><img src="../assets/img/dose/04-catalog.png" alt="Catalog page titled 'All scents' with eight fragrances, mood filters, and a 'cabinet of moods' panel" loading="lazy" /></span>
-              <figcaption><b>Catalog</b> — "a cabinet of moods." Every bottle shows its notes and price up front, filterable by mood, notes, and presence.</figcaption>
-            </figure>
-            <figure class="shot">
-              <span class="frame"><img src="../assets/img/dose/05-product.png" alt="Blue Drift product page with imagery, scent description, tiered cart-savings, and cross-sell" loading="lazy" /></span>
-              <figcaption><b>Product page</b> — story and imagery first, then price. Tiered "layer your cart to save" mechanics and cross-sell drive basket size; notes, shipping, and an authenticity guarantee close the trust gap.</figcaption>
-            </figure>
+          <div class="clause">
+            <h3>Business problem</h3>
+            <div class="prose"><ul>
+              <li>Niche fragrance sells on identity and story; a generic Shopify theme undermines both.</li>
+              <li>Undecided visitors leave: without guidance, choosing a fragrance online is a gamble customers avoid.</li>
+              <li>Organic discovery mattered — the brand needed search engines to understand its catalogue properly.</li>
+            </ul></div>
           </div>
-        </div>
-      </div>
+          <div class="clause">
+            <h3>User problem</h3>
+            <div class="prose"><p>“Will I like it?” is the question every fragrance customer is silently asking. The experience has to replace the counter test: describe scent in evocative but concrete language, situate each fragrance in a mood and moment, and guide the undecided instead of presenting a wall of bottles.</p></div>
+          </div>
+          <div class="clause">
+            <h3>Constraints</h3>
+            <div class="prose"><ul>
+              <li>Shopify’s theme architecture — premium feel within Liquid’s rendering model and the platform’s checkout boundaries.</li>
+              <li>Performance: rich visuals could not cost the mobile experience, where most traffic lives.</li>
+              <li>The brand team needed to manage products and campaigns without a developer in the loop.</li>
+            </ul></div>
+          </div>
+        </section>
 
-      <section class="cs-section container reveal">
-        <aside><span class="cs-num">09</span><h2>Technical implementation</h2></aside>
-        <div class="cs-prose">
-          <ul>
-            <li><strong>Custom Liquid theme work</strong> — sections the brand team can
-                rearrange and edit safely from the Shopify admin.</li>
-            <li><strong>Cart &amp; discount logic</strong> — predictable price display
-                across promotions, bundles, and codes.</li>
-            <li><strong>SEO &amp; structured data</strong> — product schema, clean
-                metadata, and crawlable category structure so search engines understand
-                the catalogue.</li>
-            <li><strong>Performance passes</strong> — image optimisation and lean
-                scripts to keep the premium feel fast on mobile.</li>
-          </ul>
-        </div>
-      </section>
+        <!-- The approach -->
+        <section class="chapter" id="approach" aria-labelledby="approach-h">
+          <div class="chapter-head"><h2 id="approach-h">The approach</h2><p lang="ar" dir="rtl">النهج</p></div>
+          <div class="clause">
+            <h3>My role</h3>
+            <div class="prose"><p>I owned the digital experience: brand direction for the store, the product page and discovery UX, and the Shopify implementation — Liquid templates, cart and discount logic, structured data, and performance work.</p></div>
+          </div>
+          <div class="clause">
+            <h3>Product strategy</h3>
+            <div class="prose"><p>Two paths, deliberately designed: <strong>customers who know</strong> get a fast, confident route to product and checkout; <strong>customers who don’t</strong> get “Find Your DÖSE” — a short, sensory quiz that narrows the catalogue to a personal recommendation. The store’s job is to make sure nobody leaves because they couldn’t decide.</p></div>
+          </div>
+        </section>
 
-      <section class="cs-section container reveal">
-        <aside><span class="cs-num">10</span><h2>Challenges &amp; trade-offs</h2></aside>
-        <div class="cs-prose">
-          <p><strong>Atmosphere vs. speed.</strong> Every atmospheric image and motion
-             flourish costs milliseconds. The discipline was treating performance as
-             part of the brand — a premium store that stutters isn't premium.</p>
-          <p><strong>Platform boundaries.</strong> Shopify draws hard lines around
-             checkout. Rather than fighting the platform, the design spends its
-             ambition where the platform is flexible — storytelling, discovery, and
-             the cart — and keeps checkout native and trusted.</p>
-        </div>
-      </section>
+        <!-- Find Your DÖSE -->
+        <section class="chapter" id="conversation" aria-labelledby="conversation-h">
+          <div class="chapter-head"><h2 id="conversation-h">Find Your DÖSE</h2><p lang="ar" dir="rtl">الاكتشاف</p></div>
+          <p class="chapter-intro">When customers struggle to choose, don’t add more information — add a conversation that narrows it.</p>
 
-      <section class="cs-section container reveal">
-        <aside><span class="cs-num">11</span><h2>Outcome</h2></aside>
-        <div class="cs-prose">
-          <p>Qualitative outcomes — no invented figures:</p>
+          <div class="band stock-dose">
+            <ol class="narrow" aria-label="Find Your DÖSE flow">
+              <li>How do you want to feel?<small>Mood</small></li>
+              <li>When will you wear it?<small>Occasion</small></li>
+              <li>How bold?<small>Intensity</small></li>
+              <li>Your DÖSE<small>Recommendation → product page</small></li>
+            </ol>
+            <p class="band-note">“Find Your DÖSE” — replacing the fragrance counter with a conversation.</p>
+          </div>
+
+          <div class="clause">
+            <h3>UX &amp; system architecture</h3>
+            <div class="prose"><ul>
+              <li><strong>Product pages as stories</strong> — scent pyramid, mood framing, and imagery sequenced before specifications and price anxiety.</li>
+              <li><strong>Cart designed for momentum</strong> — clear discount states, no surprise costs, and a short path to Shopify’s checkout.</li>
+              <li><span class="claim"><strong>Discovery quiz mapped to product metadata</strong> — recommendations come from structured attributes the brand team can edit, not hardcoded rules.</span><span class="src"><b>Stated</b></span></li>
+            </ul></div>
+          </div>
+        </section>
+
+        <!-- The store -->
+        <section class="chapter" id="store" aria-labelledby="store-h">
+          <div class="chapter-head"><h2 id="store-h">The store</h2><p lang="ar" dir="rtl">المتجر</p></div>
+          <div class="clause">
+            <h3>Design decisions</h3>
+            <div class="prose"><p>The visual direction leans into stillness: large imagery, disciplined typography, and restrained motion — closer to editorial perfume photography than to a discount storefront. Language does the heavy lifting, describing scent in scenes and moments rather than ingredient lists alone.</p></div>
+          </div>
+
+          <div class="band stock-dose">
+            <div class="exhibits">
+              <figure class="ex ex--wide">
+                <a href="../assets/img/dose/01-home-1600.webp" data-view>
+                  <span class="vh">Open full screenshot: </span>
+                  <img src="../assets/img/dose/01-home-800.webp" srcset="../assets/img/dose/01-home-800.webp 800w, ../assets/img/dose/01-home-1600.webp 1600w" sizes="(min-width: 1100px) 70vw, 92vw" width="1600" height="860" loading="lazy" decoding="async" alt="DÖSE homepage hero: luxury eau de parfum bottles staged as still life on sand with driftwood" />
+                </a>
+                <figcaption><b>Home</b> — an editorial hero that treats the product as still life. <span class="claim">“Find Your DÖSE” is always one tap away for the undecided.</span><a class="src" href="../assets/img/dose/01-home-1600.webp"><b>Shown</b></a></figcaption>
+                <span class="prov">doseeg.com/</span>
+              </figure>
+              <figure class="ex">
+                <a href="../assets/img/dose/02-home-ritual-1600.webp" data-view>
+                  <span class="vh">Open full screenshot: </span>
+                  <img src="../assets/img/dose/02-home-ritual-800.webp" srcset="../assets/img/dose/02-home-ritual-800.webp 800w, ../assets/img/dose/02-home-ritual-1600.webp 1600w" sizes="(min-width: 1100px) 35vw, 92vw" width="1600" height="860" loading="lazy" decoding="async" alt="Homepage section headed 'Small amounts, lasting presence' with a moody perfume photograph" />
+                </a>
+                <figcaption><b>Brand story</b> — “measured in feeling.” Scent is sold in scenes and rituals, carrying what a screen can’t.</figcaption>
+                <span class="prov">doseeg.com/ · further down</span>
+              </figure>
+              <figure class="ex">
+                <a href="../assets/img/dose/03-home-moods-1600.webp" data-view>
+                  <span class="vh">Open full screenshot: </span>
+                  <img src="../assets/img/dose/03-home-moods-800.webp" srcset="../assets/img/dose/03-home-moods-800.webp 800w, ../assets/img/dose/03-home-moods-1600.webp 1600w" sizes="(min-width: 1100px) 35vw, 92vw" width="1600" height="860" loading="lazy" decoding="async" alt="Homepage 'Find the bottle that fits the hour' section with For Him, For Her, and Unisex flat-lays" />
+                </a>
+                <figcaption><b>Shop by mood</b> — “find the bottle that fits the hour.” Entry points by feeling and occasion, not just a product grid.</figcaption>
+                <span class="prov">doseeg.com/ · further down</span>
+              </figure>
+              <figure class="ex ex--crop" style="--ar: 4 / 5">
+                <a href="../assets/img/dose/04-catalog-1600.webp" data-view>
+                  <span class="vh">Open full screenshot: </span>
+                  <img src="../assets/img/dose/04-catalog-800.webp" srcset="../assets/img/dose/04-catalog-800.webp 800w, ../assets/img/dose/04-catalog-1600.webp 1600w" sizes="(min-width: 1100px) 35vw, 92vw" width="1600" height="3082" loading="lazy" decoding="async" alt="Catalog page titled 'All scents' with eight fragrances, mood filters, and a 'cabinet of moods' panel" />
+                </a>
+                <figcaption><b>Catalog</b> — “a cabinet of moods.” <span class="claim">Every bottle shows its notes and price up front, filterable by mood, notes, and presence.</span><a class="src" href="../assets/img/dose/04-catalog-1600.webp"><b>Shown</b></a></figcaption>
+                <span class="prov">doseeg.com/collections/all</span>
+              </figure>
+              <figure class="ex ex--crop" style="--ar: 4 / 5">
+                <a href="../assets/img/dose/05-product-1600.webp" data-view>
+                  <span class="vh">Open full screenshot: </span>
+                  <img src="../assets/img/dose/05-product-800.webp" srcset="../assets/img/dose/05-product-800.webp 800w, ../assets/img/dose/05-product-1600.webp 1600w" sizes="(min-width: 1100px) 35vw, 92vw" width="1600" height="1728" loading="lazy" decoding="async" alt="Blue Drift product page with imagery, scent description, tiered cart-savings, and cross-sell" />
+                </a>
+                <figcaption><b>Product page</b> — story and imagery first, then price. <span class="claim">Tiered “layer your cart to save” mechanics and cross-sell drive basket size</span><a class="src" href="../assets/img/dose/05-product-1600.webp"><b>Shown</b></a>; notes, shipping, and an authenticity guarantee close the trust gap.</figcaption>
+                <span class="prov">doseeg.com/products/blue-drift</span>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <!-- The build -->
+        <section class="chapter" id="build" aria-labelledby="build-h">
+          <div class="chapter-head"><h2 id="build-h">The build</h2><p lang="ar" dir="rtl">البناء</p></div>
+          <div class="clause">
+            <h3>Technical implementation</h3>
+            <div class="prose"><ul>
+              <li><strong>Custom Liquid theme work</strong> — sections the brand team can rearrange and edit safely from the Shopify admin.</li>
+              <li><strong>Cart &amp; discount logic</strong> — predictable price display across promotions, bundles, and codes.</li>
+              <li><span class="claim"><strong>SEO &amp; structured data</strong> — product schema, clean metadata, and crawlable category structure so search engines understand the catalogue.</span><span class="src"><b>Stated</b></span></li>
+              <li><span class="claim"><strong>Performance passes</strong> — image optimisation and lean scripts to keep the premium feel fast on mobile.</span><span class="src"><b>Stated</b></span></li>
+            </ul></div>
+          </div>
+        </section>
+
+        <!-- Trade-offs -->
+        <section class="chapter" id="tradeoffs" aria-labelledby="tradeoffs-h">
+          <div class="chapter-head"><h2 id="tradeoffs-h">Trade-offs</h2><p lang="ar" dir="rtl">المفاضلات</p></div>
+          <div class="clause">
+            <h3>Atmosphere vs. speed</h3>
+            <div class="prose"><p>Every atmospheric image and motion flourish costs milliseconds. The discipline was treating performance as part of the brand — a premium store that stutters isn’t premium.</p></div>
+          </div>
+          <div class="clause">
+            <h3>Platform boundaries</h3>
+            <div class="prose"><p>Shopify draws hard lines around checkout. Rather than fighting the platform, the design spends its ambition where the platform is flexible — storytelling, discovery, and the cart — and keeps checkout native and trusted.</p></div>
+          </div>
+        </section>
+
+        <!-- Outcome & lessons -->
+        <section class="chapter" id="outcome" aria-labelledby="outcome-h">
+          <div class="chapter-head"><h2 id="outcome-h">Outcome &amp; lessons</h2><p lang="ar" dir="rtl">النتيجة</p></div>
+          <p class="chapter-intro">Qualitative outcomes — no invented figures.</p>
           <div class="outcomes">
-            <div class="outcome-card">
-              <svg viewBox="0 0 16 16"><use href="#i-check"/></svg>
-              <p><strong>A brand-true store</strong>The digital experience now matches
-              the ambition of the product it sells.</p>
+            <div class="clause">
+              <h3>A brand-true store</h3>
+              <p class="prose">The digital experience matches the ambition of the product it sells.</p>
             </div>
-            <div class="outcome-card">
-              <svg viewBox="0 0 16 16"><use href="#i-check"/></svg>
-              <p><strong>Guided discovery</strong>Undecided visitors have a designed
-              path to a confident choice instead of a bounce.</p>
+            <div class="clause">
+              <h3>Guided discovery</h3>
+              <p class="prose"><span class="claim">Undecided visitors have a designed path to a confident choice instead of a bounce.</span><a class="src" href="#conversation"><b>Documented</b></a></p>
             </div>
-            <div class="outcome-card">
-              <svg viewBox="0 0 16 16"><use href="#i-check"/></svg>
-              <p><strong>Search-ready catalogue</strong>Structured data and clean
-              information architecture make products legible to search engines.</p>
+            <div class="clause">
+              <h3>Search-ready catalogue</h3>
+              <p class="prose"><span class="claim">Structured data and clean information architecture make products legible to search engines.</span><span class="src"><b>Stated</b></span></p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="cs-section container reveal">
-        <aside><span class="cs-num">12</span><h2>Lessons learned</h2></aside>
-        <div class="cs-prose">
-          <p>E-commerce for sensory products is a writing and sequencing problem as
-             much as a design problem. The quiz taught the broader lesson: when
-             customers struggle to choose, don't add more information — add a
-             conversation that narrows it.</p>
-        </div>
-      </section>
-    </div>
-
-    <div class="cs-next">
-      <div class="container">
-        <span class="k">Back to the beginning</span>
-        <a class="next-title" href="amwag-attendance.html">
-          Amwag Attendance
-          <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-arrow"/></svg>
-        </a>
+          <div class="clause" style="border-top-width: 0; padding-top: 2.5rem">
+            <h3>Lesson</h3>
+            <div>
+              <p class="finding">When customers struggle to choose, don’t add more information — add a conversation that narrows it.</p>
+              <p class="finding-src prose">E-commerce for sensory products is a writing and sequencing problem as much as a design problem. The quiz taught the broader lesson.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
+
+    <nav class="next" aria-label="Next entry">
+      <p class="lab">Next entry <span lang="ar" dir="rtl">القيد التالي</span></p>
+      <div>
+        <a class="next-title" href="amwag-attendance.html">Amwag Attendance</a>
+        <p class="back"><a class="go" href="../index.html#work">Back to the register
+          <svg class="arr" viewBox="0 0 20 12" aria-hidden="true"><path d="M0 6h18M13 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></p>
+      </div>
+    </nav>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <a class="sig" href="../index.html" aria-label="AE — home">
-        <svg viewBox="0 0 64 64"><use href="#ae-mark" style="color:#eceff4"/></svg>
-        <small>© <span id="year">2026</span> Abdelhmeed Elshorbagy</small>
-      </a>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="../index.html#work">Work</a>
-        <a href="../index.html#contact">Contact</a>
-      </nav>
-      <small>Designed &amp; built by AE · Egypt</small>
+  <footer class="colophon">
+    <a class="sig" href="../index.html" aria-label="Back to the register">
+      <svg class="mark" viewBox="0 0 60 44" aria-hidden="true" focusable="false"><path d="M2 42 13 6l11 36M50 6H32v36h18" fill="none" stroke="currentColor" stroke-width="5"/><path d="M6.3 28H60" fill="none" stroke="currentColor" stroke-width="3.3"/></svg>
+      <span class="rule-line" aria-hidden="true"></span>
+    </a>
+    <div class="colophon-text">
+      <p>End of entry · © <span data-year>2026</span> Abdelhmeed Elshorbagy · Egypt</p>
+      <p>Designed &amp; built by hand. Set in Changa, Readex Pro and Martian Mono.</p>
     </div>
   </footer>
+
+  <dialog class="viewer" id="viewer" aria-label="Screenshot viewer">
+    <div class="viewer-bar">
+      <p class="viewer-cap"></p>
+      <form method="dialog"><button class="btn" type="submit">Close</button></form>
+    </div>
+    <div class="viewer-frame"></div>
+  </dialog>
 
   <script src="../assets/js/main.js" defer></script>
 </body>

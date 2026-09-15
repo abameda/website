@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amwag Travel — Case Study · Abdelhmeed Elshorbagy</title>
+  <meta name="description" content="Case study: a bilingual mobile booking experience for intercity transportation — destinations, offices, trip types, seat selection, payments, and tickets." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Amwag Travel — bilingual transportation booking, designed for real passengers" />
+  <meta property="og:description" content="How complex booking logic — destinations, office hierarchies, trip types, seat maps — became a simple bilingual mobile experience." />
+  <meta property="og:image" content="../assets/og.png" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="legacy/main.css" />
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="ae-mark" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 50 L34 14" stroke="currentColor"/>
+        <path d="M53 14 H34 V50 H53" stroke="currentColor"/>
+        <path d="M23 32 H49" stroke="#55b7ff"/>
+      </g>
+      <g id="i-arrow"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g id="i-check"><path d="M3 8.5 6.5 12 13 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="../index.html" aria-label="AE — home">
+        <svg viewBox="0 0 64 64"><use href="#ae-mark" style="color:#eceff4"/></svg>
+        <span class="logo-name">Abdelhmeed Elshorbagy</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="../index.html#contact">
+        <span class="dot-live" aria-hidden="true"></span>
+        Available for projects
+      </a>
+      <button class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#expertise">Expertise</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+
+  <main id="main">
+    <section class="cs-hero">
+      <div class="container">
+        <p class="crumb reveal"><a href="../index.html#work">Selected work</a> <span>/</span> Case study 01</p>
+        <h1 class="reveal">Amwag Travel — booking a seat should feel this simple.</h1>
+        <p class="cs-lede reveal">
+          A bilingual mobile experience for intercity transportation: destinations,
+          office hierarchies, trip types, seat maps, payments, and tickets — designed
+          so the passenger never feels the complexity underneath.
+        </p>
+        <div class="cs-facts reveal">
+          <div class="cs-fact"><span class="k">Category</span><span class="v">Mobile product · Travel &amp; transportation</span></div>
+          <div class="cs-fact"><span class="k">Role</span><span class="v">Product thinking · UX architecture · UI design · Technical direction</span></div>
+          <div class="cs-fact"><span class="k">Languages</span><span class="v">Arabic (RTL) &amp; English (LTR)</span></div>
+          <div class="cs-fact"><span class="k">Timeline</span><span class="v"><span class="placeholder-tag">add dates</span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-body">
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">01</span><h2>Context</h2></aside>
+        <div class="cs-prose">
+          <p>Amwag operates intercity transportation with a network of offices,
+             destinations, and trip types. Booking historically depended on phone
+             calls and physical offices — which works, but caps how many passengers
+             the operation can serve and how predictably seats fill.</p>
+          <p>The mobile application had to become the primary booking channel for a
+             customer base that is bilingual, mobile-first, and used to consumer apps
+             that just work.</p>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">02</span><h2>Business problem</h2></aside>
+        <div class="cs-prose">
+          <p>The operation's structure is genuinely complex: destinations map to
+             offices, offices to routes, routes to trip types and schedules, and every
+             departure carries its own seat inventory and pricing. Staff can hold that
+             model in their heads. Customers cannot — and shouldn't have to.</p>
+          <ul>
+            <li>Bookings bottlenecked on staff availability and office hours.</li>
+            <li>Seat inventory lived in the operation, invisible to the customer.</li>
+            <li>Every booking rule the customer had to learn was a booking lost.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">03</span><h2>User problem</h2></aside>
+        <div class="cs-prose">
+          <p>A passenger has one job: get from here to there, on a seat they chose,
+             with a ticket they trust. Anything that interrupts that — unclear office
+             hierarchies, ambiguous trip types, payment anxiety, lost tickets — breaks
+             confidence in the whole service.</p>
+          <p>And it has to work identically in Arabic and English. Not translated as an
+             afterthought: designed for RTL from the first wireframe.</p>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">04</span><h2>Constraints</h2></aside>
+        <div class="cs-prose">
+          <ul>
+            <li>The app must mirror real operational structure — offices and schedules
+                are facts, not design choices.</li>
+            <li>Full bilingual parity: every flow, state, and edge case in both
+                directions of text.</li>
+            <li>Seat selection must reflect live availability to avoid double-booking.</li>
+            <li>Customers range widely in tech comfort — flows must survive first-time
+                users.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">05</span><h2>My role</h2></aside>
+        <div class="cs-prose">
+          <p>I owned the product end to end: translating the transportation workflow
+             into a product model, architecting the UX, designing the bilingual UI
+             system, and directing the technical implementation — including how booking
+             state, seat inventory, and tickets flow through the system.</p>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">06</span><h2>Product strategy</h2></aside>
+        <div class="cs-prose">
+          <p>The core decision: <strong>the customer never navigates the company's
+             structure — the app translates it.</strong> Passengers think
+             "destination → date → seat," so that became the spine of the experience.
+             Office hierarchies, routes, and trip types resolve behind the scenes and
+             surface only when they change the passenger's decision.</p>
+          <p>Everything else was prioritised against one question: does this step move
+             the passenger closer to a confirmed seat?</p>
+        </div>
+      </section>
+
+      <!-- Booking flow diagram -->
+      <div class="cs-band reveal">
+        <div class="container">
+          <div class="flow" role="img" aria-label="Booking flow: destination, trip and date, seat selection, payment, ticket">
+            <span class="step">Choose destination</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span class="step">Trip type &amp; date</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span class="step hot">Pick your seat</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span class="step">Pay</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span class="step hot">Ticket in hand</span>
+          </div>
+          <p class="band-note">The passenger's mental model — five steps, no org charts.</p>
+        </div>
+      </div>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">07</span><h2>UX &amp; system architecture</h2></aside>
+        <div class="cs-prose">
+          <p>The booking flow is a state machine, and the UX treats it that way: each
+             step validates before the next unlocks, and the passenger can always see
+             where they are and step back without losing progress.</p>
+          <h3>Structural decisions</h3>
+          <ul>
+            <li><strong>Destination-first search</strong> — offices are resolved from the
+                destination, never chosen from an abstract list.</li>
+            <li><strong>Seat map as the centrepiece</strong> — a visual map with live
+                availability turned the most complex step into the most satisfying one.</li>
+            <li><strong>Tickets as persistent objects</strong> — bookings live in a wallet
+                with clear states: upcoming, used, cancelled.</li>
+            <li><strong>Mirrored layouts</strong> — every screen was designed in RTL and
+                LTR simultaneously, so neither language feels like the translation.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">08</span><h2>Design decisions</h2></aside>
+        <div class="cs-prose">
+          <p>The visual language is calm and confident: generous spacing, a restrained
+             palette, and typography tuned separately for Arabic and Latin scripts so
+             both feel native. Progress is always visible; errors are written in human
+             language; and the confirmed-ticket moment gets deliberate visual weight —
+             it's the emotional payoff of the whole flow.</p>
+        </div>
+      </section>
+
+      <!-- Product screens -->
+      <div class="container reveal">
+        <div class="cs-shots">
+          <p class="shots-label">Onboarding &amp; account</p>
+          <div class="shots-phones">
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/01-welcome.png" alt="Amwag Travel welcome screen with a coach at sunset and create-account and log-in options" loading="lazy" /></span>
+              <figcaption><b>Welcome aboard</b> — the brand's first impression, with a guest path for the hesitant.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/02-login.png" alt="Log-in screen offering email or passkey sign-in" loading="lazy" /></span>
+              <figcaption><b>Log in</b> — email, phone, or a passkey verified with Face&nbsp;ID / fingerprint.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/03-signup.png" alt="Create-account sign-up screen" loading="lazy" /></span>
+              <figcaption><b>Create account</b> — the shortest honest path to a first booking.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/04-otp-verify.png" alt="One-time passcode verification screen" loading="lazy" /></span>
+              <figcaption><b>Verify</b> — a one-time code confirms the number that holds the ticket.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/05-forgot-password.png" alt="Forgot-password recovery screen" loading="lazy" /></span>
+              <figcaption><b>Recovery</b> — a calm, unambiguous way back in.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/06-success.png" alt="Account-ready success screen" loading="lazy" /></span>
+              <figcaption><b>Account ready</b> — a clear finish line before the real journey begins.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="cs-shots">
+          <p class="shots-label">The booking flow — destination to ticket</p>
+          <div class="shots-phones">
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/01-home.png" alt="Home screen with destination-first search and the next upcoming trip" loading="lazy" /></span>
+              <figcaption><b>Home</b> — destination-first search, with the next trip and open tickets surfaced.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/02-search-results.png" alt="Available buses list with class and time-of-day filters" loading="lazy" /></span>
+              <figcaption><b>Available buses</b> — filter by coach class and time of day; fares and seats-left in view.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/03-seat-map.png" alt="Seat selection map showing available, selected, and occupied seats" loading="lazy" /></span>
+              <figcaption><b>Pick your seat</b> — a live availability map turns the hardest step into the most satisfying one.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/04-passenger-details.png" alt="Passenger details entry screen" loading="lazy" /></span>
+              <figcaption><b>Passenger details</b> — only what the ticket actually needs.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/05-payment.png" alt="Payment screen with wallet points, card, Apple Pay, and Fawry options" loading="lazy" /></span>
+              <figcaption><b>Payment</b> — wallet points, card / Apple&nbsp;Pay, or Fawry cash. Nothing charged until confirmed.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/06-booking-confirmed.png" alt="Booking confirmed screen with ticket and QR code" loading="lazy" /></span>
+              <figcaption><b>Booking confirmed</b> — the emotional payoff: a trusted ticket with a QR to board.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/07-my-bookings.png" alt="My bookings wallet with upcoming, open, completed, and cancelled tabs" loading="lazy" /></span>
+              <figcaption><b>My bookings</b> — a wallet of tickets: upcoming, open, completed, cancelled.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/08-booking-details.png" alt="Detailed view of a single booking" loading="lazy" /></span>
+              <figcaption><b>Booking details</b> — every fact about a trip in one persistent object.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/09-notifications.png" alt="Notifications screen" loading="lazy" /></span>
+              <figcaption><b>Notifications</b> — trip reminders and status, without noise.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/10-account.png" alt="Account screen with the Amwag wallet, points, and payment methods" loading="lazy" /></span>
+              <figcaption><b>Account &amp; wallet</b> — loyalty points that convert to seat discounts, and saved payment methods.</figcaption>
+            </figure>
+            <figure class="shot">
+              <span class="frame"><img src="../assets/img/amwag-travel/12-edit-reschedule.png" alt="Edit and reschedule a booking screen" loading="lazy" /></span>
+              <figcaption><b>Edit &amp; reschedule</b> — plans change; the ticket changes with them.</figcaption>
+            </figure>
+          </div>
+          <p class="band-note" style="text-align:left;margin-top:22px">Every screen was designed in Arabic (RTL) and English (LTR) in parallel — neither language is the translation.</p>
+        </div>
+      </div>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">09</span><h2>Technical implementation</h2></aside>
+        <div class="cs-prose">
+          <p>The implementation follows the same separation the UX promises: a clean
+             booking API that owns availability and state, with the app as a fast,
+             resilient client.</p>
+          <ul>
+            <li>Seat availability checked at selection and re-validated at payment to
+                prevent double-booking.</li>
+            <li>Booking state modelled explicitly — pending, held, paid, issued,
+                cancelled — so every screen renders from one source of truth.</li>
+            <li>Localisation built into the data layer, not bolted onto the UI.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">10</span><h2>Challenges &amp; trade-offs</h2></aside>
+        <div class="cs-prose">
+          <p><strong>Fidelity vs. simplicity.</strong> The hardest calls were about what
+             <em>not</em> to show. Exposing the full office/route model would have been
+             "accurate" — and unusable. We collapsed it, and accepted that a few
+             operational edge cases route to staff instead of self-service.</p>
+          <p><strong>Bilingual parity costs real effort.</strong> Designing RTL-first
+             roughly doubles layout thinking early on. It was the right trade: retrofitting
+             RTL later is where bilingual apps usually break.</p>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">11</span><h2>Outcome</h2></aside>
+        <div class="cs-prose">
+          <p>Qualitative outcomes — stated honestly, without invented numbers:</p>
+          <div class="outcomes">
+            <div class="outcome-card">
+              <svg viewBox="0 0 16 16"><use href="#i-check"/></svg>
+              <p><strong>Self-service booking</strong>A complete phone-free path from
+              destination to confirmed seat, in either language.</p>
+            </div>
+            <div class="outcome-card">
+              <svg viewBox="0 0 16 16"><use href="#i-check"/></svg>
+              <p><strong>Complexity absorbed</strong>Office and route logic is handled by
+              the system, not learned by the passenger.</p>
+            </div>
+            <div class="outcome-card">
+              <svg viewBox="0 0 16 16"><use href="#i-check"/></svg>
+              <p><strong>A foundation, not a feature</strong>The booking model supports
+              new destinations and trip types without redesign.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section container reveal">
+        <aside><span class="cs-num">12</span><h2>Lessons learned</h2></aside>
+        <div class="cs-prose">
+          <p>Complex domains reward the discipline of choosing a single user mental
+             model early and defending it. Every time we were tempted to expose internal
+             structure "for flexibility," the flow got worse. The system's job is to be
+             complicated so the passenger doesn't have to be.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="cs-next">
+      <div class="container">
+        <span class="k">Next case study</span>
+        <a class="next-title" href="amwag-attendance.html">
+          Amwag Attendance
+          <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="sig" href="../index.html" aria-label="AE — home">
+        <svg viewBox="0 0 64 64"><use href="#ae-mark" style="color:#eceff4"/></svg>
+        <small>© <span id="year">2026</span> Abdelhmeed Elshorbagy</small>
+      </a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <small>Designed &amp; built by AE · Egypt</small>
+    </div>
+  </footer>
+
+  <script src="legacy/main.js" defer></script>
+</body>
+</html>

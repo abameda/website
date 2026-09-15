@@ -1,8 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#090b10"/>
-  <g fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M12 50 L34 14" stroke="#eceff4"/>
-    <path d="M53 14 H34 V50 H53" stroke="#eceff4"/>
-    <path d="M23 32 H49" stroke="#55b7ff"/>
-  </g>
+  <!-- AE: the A has no crossbar and the E has no middle arm; one line supplies both. -->
+  <rect width="64" height="64" fill="#ECEDEA"/>
+  <path d="M5 50 16 14l11 36M53 14H35v36h18M9.3 36H53" transform="translate(0 0)" fill="none" stroke="#131513" stroke-width="5" stroke-linejoin="miter"/>
 </svg>

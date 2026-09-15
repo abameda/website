@@ -1,0 +1,6 @@
+# Search engines and AI assistants (GPTBot, OAI-SearchBot, ClaudeBot,
+# PerplexityBot, Google-Extended, Bingbot, …) are all welcome to read and cite this site.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.abdelhmeed.com/sitemap.xml

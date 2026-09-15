@@ -1,78 +1,83 @@
-# AE — Abdelhmeed Elshorbagy · Portfolio
+# Abdelhmeed Elshorbagy — The Register
 
-A bespoke, dependency-free portfolio: semantic HTML, one custom CSS design
-system, and vanilla JS for motion. No frameworks, no build step — open
-`index.html` or deploy the folder as-is to Vercel, Netlify, Cloudflare Pages,
-or GitHub Pages.
+A hand-built, dependency-free portfolio: semantic HTML, one CSS file, one small
+JS file. No framework, no build step — deploy the folder to Vercel, Netlify,
+Cloudflare Pages or GitHub Pages.
+
+The design system, rules and motion grammar are documented in
+[`DESIGN.md`](DESIGN.md). Read it before changing the look.
 
 ## Structure
 
 ```
-index.html                  Home — hero, work, expertise, philosophy, about, timeline, contact
-404.html                    Custom not-found page (uses root-absolute paths — works when deployed)
+index.html                  Home — record card, work ledger, project plates, record timeline, method, contact
+404.html                    Not-found page (root-absolute paths; works at the domain root)
 work/
-  amwag-attendance.html     Case study 01 — attendance governance platform
-  dose-fragrance.html       Case study 02 — DÖSE Shopify experience
-  amwag-travel.html         Bilingual transportation booking app (ARCHIVED:
-                            unlinked for now — restore snippets from
-                            _disabled-amwag-travel-snippets.html)
-  yosr-platform.html        Arabic-first LMS (DISABLED: unlinked for now,
-                            pending content update — restore snippets
-                            from _disabled-yosr-snippets.html)
+  amwag-attendance.html     Case study — the check-in pipeline
+  dose-fragrance.html       Case study — the narrowing conversation
+archive/                    Unlinked, noindex. Amwag Travel app + Yosr LMS pages and their
+                            restore snippets, pinned to legacy/main.css so they still render.
 assets/
-  css/main.css              Full design system (tokens at the top)
-  js/main.js                Intro, nav, reveals, hero canvas, capability map, copy-email
-  favicon.svg               AE monogram favicon
-  og.svg                    Social share card — EXPORT TO og.png (1200×630) before deploying
-                            and update the og:image meta tags; most platforms won't render SVG.
+  css/main.css              The whole design system (tokens at the top)
+  js/main.js                Sources toggle, copy email, timeline "now", screenshot viewer, wayfinding
+  img/                      WebP screens (800/1600), decision crops, portrait
+  og.png                    1200×630 share card
+  favicon.svg               The AE mark
+  Abdelhmeed-Elshorbagy-CV.pdf
+robots.txt, sitemap.xml     Crawl rules (all search and AI bots allowed) and page list
+llms.txt                    Plain-text profile for AI assistants
+.vercelignore               Keeps tooling, archive and source files out of the deploy
+DESIGN.md                   Design thesis, tokens, type, motion, how to add a case study
 ```
 
-## The AE mark
+## Search and AI visibility
 
-Three strokes: the A's diagonal, the E's frame, and one continuous crossbar
-that starts on the A and becomes the E's middle arm — one line running through
-both letters (design ↔ engineering, connected). The crossbar is always the
-accent blue (#55b7ff). Reused via `<use href="#ae-mark">` on every page.
+The official address is `https://www.abdelhmeed.com` (the bare domain redirects
+there). Canonical links, Open Graph URLs, JSON-LD, the sitemap and `llms.txt`
+all use it — if the primary host changes in Vercel, replace that string
+everywhere. The home page carries `ProfilePage` + `Person` structured data
+(names, role, employer, school, certificate, profiles); case studies carry
+`Article` + `BreadcrumbList` linked to the same person `@id`. When a fact
+changes, update it in the page text, the JSON-LD, `llms.txt` and the CV together.
 
-## Content placeholders still to fill in (searchable as `placeholder-tag`)
+## Behaviour
 
-Filled already: education (Minya National University, 2024–2028), Amwag role
-(IT Specialist, Feb 2025 — Present), DÖSE dates (Oct 2025 — Present), LinkedIn
-/ GitHub URLs, CV PDF, portrait photo, case-study screenshots.
+- **Sources** (header and record card): marks every claim as Shown, Documented,
+  Stated or Withheld. The choice persists between pages (`localStorage`).
+  Without JavaScript, marks are always visible.
+- Screenshots open full size in a native `<dialog>`; without JavaScript the link
+  opens the image.
+- Page-to-page navigation uses cross-document view transitions where supported.
+- Everything honours `prefers-reduced-motion`. No content is hidden behind
+  scroll or animation.
+- Fonts: Changa, Readex Pro and Martian Mono from Google Fonts.
 
-Remaining:
+## Before deploying — needs the owner
 
-- Timeline dates on the Amwag Travel and Amwag Attendance case-study pages
-- Amwag Travel (mobile app) is archived (homepage card removed, case study
-  unlinked; only Attendance is public) — restore from
-  `_disabled-amwag-travel-snippets.html` when it should be shown again
-- Yosr is fully disabled (homepage card + timeline entry removed, case study
-  unlinked) — restore from `_disabled-yosr-snippets.html` after its content update
-- Export `assets/og.svg` to og.png (1200×630) and update the og:image meta tag
+These are facts only you can confirm; the site does not guess them.
 
-Delete the `<span class="placeholder-tag">` elements as you fill each item in.
-
-## Design tokens
-
-Edit once in `:root` at the top of `assets/css/main.css`:
-graphite `#090b10`, panel `#10141d`, ink `#eceff4`, accent `#55b7ff`.
-Type: Clash Display (display) · General Sans (body) · JetBrains Mono (labels),
-loaded from Fontshare / Google Fonts.
-
-## Behavior notes
-
-- Intro plays once per session (sessionStorage), is skippable (button / Esc),
-  and never plays for `prefers-reduced-motion` users.
-- Hero canvas pauses when off-screen; all motion honors reduced-motion.
-- Arabic version: the architecture is ready (bilingual content already appears
-  in the work visuals); add a `/ar/` mirror with `dir="rtl"` when Arabic copy
-  exists. Per the content plan, no language switcher until then.
-
-## Porting to Framer (if desired)
-
-- Colors/type map 1:1 to Framer color & text styles (see `:root` tokens).
-- Case studies map to a CMS collection: title, category, role, stack tags,
-  and the 12 narrative sections as rich-text fields; `work/*.html` is the
-  reusable page template.
-- The hero canvas and capability map become code components
-  (`assets/js/main.js` sections 5 and 6 contain the logic).
+1. **Amwag Attendance dates.** The case study says "Built in the IT Specialist
+   role, Feb 2025 – present". Replace with exact dates if you have them.
+2. **Arabic labels.** Every Arabic word on the site is a short interface label
+   (الاسم، البداية، الأعمال …). Please review them; nothing longer was written on
+   your behalf.
+3. **One set of facts everywhere.** The site now follows the current CV: IT Help
+   Desk (Feb 2025 – present), Customer Service (Aug 2024 – Feb 2025), Ticketing
+   (Jun – Aug 2023), `linkedin.com/in/elshorbagy`. Keep LinkedIn, GitHub and the
+   CV saying exactly the same thing — search engines and AI assistants trust a
+   person's facts only when their sources agree.
+4. **Attendance evidence.** Screens were captured from a local instance with
+   sample data, so the "in production" claim is marked *Stated*. Redacted
+   production captures would upgrade it to *Shown*.
+5. **DÖSE wording.** The store footer says "curated niche fragrances from around
+   the world" and a product page says "Inspired by: Explorer Ultra Blue
+   Montblanc", while the portfolio calls DÖSE "an Egyptian niche fragrance brand".
+6. **Arabic name.** Not yet on the site. Add it to the Person `alternateName` list
+   in `index.html`, to `llms.txt`, and to the About paragraph, spelled exactly as
+   you write it.
+7. **Archive.** `archive/amwag-travel.html` shows the booking app the home page
+   lists as company-confidential. It is unlinked and `noindex`, but still
+   reachable if deployed. Delete it or confirm it's publishable.
+8. **Don't deploy source/tooling files**: `projects assets/`,
+   `abdelhmeed photo.jpeg`, `Abdelhmeed Elshorbagy.pages`, `graphify-out/`,
+   `CLAUDE.md`, `AGENTS.md`, `.claude/`.

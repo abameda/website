@@ -1,0 +1,12 @@
+# Source, tooling and private files — not part of the public site
+.claude
+.codex
+graphify-out
+archive
+projects assets
+abdelhmeed photo.jpeg
+*.pages
+AGENTS.md
+CLAUDE.md
+DESIGN.md
+README.md

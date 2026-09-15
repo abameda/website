@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page not found · Abdelhmeed Elshorbagy</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>No record at this address · Abdelhmeed Elshorbagy</title>
   <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#ECEDEA" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa:wght@400..800&amp;family=Readex+Pro:wght@300..600&amp;display=swap" />
   <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <g id="ae-mark" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 50 L34 14" stroke="currentColor"/>
-        <path d="M53 14 H34 V50 H53" stroke="currentColor"/>
-        <path d="M23 32 H49" stroke="#55b7ff"/>
-      </g>
-      <g id="i-arrow"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
-    </defs>
-  </svg>
+  <header class="bar">
+    <a class="sig" href="/index.html" aria-label="Abdelhmeed Elshorbagy, back to the register">
+      <svg class="mark" viewBox="0 0 60 44" aria-hidden="true" focusable="false"><path d="M2 42 13 6l11 36M50 6H32v36h18" fill="none" stroke="currentColor" stroke-width="5"/><path d="M6.3 28H60" fill="none" stroke="currentColor" stroke-width="3.3"/></svg>
+      <span class="rule-line" aria-hidden="true"></span>
+    </a>
+  </header>
 
-  <main class="notfound">
-    <svg viewBox="0 0 64 64" style="width:64px;margin-inline:auto;opacity:.9">
-      <use href="#ae-mark" style="color:#eceff4"/>
-    </svg>
-    <p class="code">404 — ROUTE NOT FOUND</p>
-    <h1>This path isn't part of the system.</h1>
-    <p>The page you're looking for was moved, renamed, or never shipped.
-       Everything worth seeing is one click away.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="/index.html">
-        Back to home
-        <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-arrow"/></svg>
-      </a>
-      <a class="btn btn-ghost" href="/index.html#work">View selected work</a>
+  <main id="main" class="notfound">
+    <div class="card" style="grid-template-areas: 'l-name name name' 'l-began began began' 'l-reach reach reach'">
+      <p class="lab l-name">Status <span lang="ar" dir="rtl">الحالة</span></p>
+      <h1 class="name" style="font-size: clamp(2.75rem, 7vw, 5.5rem)">No record at this address.</h1>
+      <p class="lab l-began">Note <span lang="ar" dir="rtl">ملاحظة</span></p>
+      <div class="began"><p class="prose">The page you’re looking for was moved, renamed, or never written. Everything worth seeing is one click away.</p></div>
+      <p class="lab l-reach">Go to <span lang="ar" dir="rtl">انتقل</span></p>
+      <div class="reach">
+        <a class="btn btn--solid" href="/index.html">The register
+          <svg class="arr" viewBox="0 0 20 12" aria-hidden="true"><path d="M0 6h18M13 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+        <a class="btn" href="/index.html#work">Work</a>
+      </div>
     </div>
   </main>
 </body>
